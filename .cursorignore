@@ -12,6 +12,7 @@ coverage/
 # Local secrets
 .env
 .env.*
+!.env.example
 
 # Binary assets (meme images don't need AI indexing)
 assets/images/

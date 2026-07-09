@@ -33,8 +33,8 @@ jobs:
       - name: Build
         run: yarn build
         env:
-          VITE_BASE_PATH: /${{ github.event.repository.name }}/
-          VITE_DATA_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/main/assets/
+          VITE_BASE_PATH: /le-monde-des-contrats-sociaux/
+          VITE_DATA_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/assets/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
