@@ -4,8 +4,6 @@ import { assetUrl, parseCsv, rowsToObjects } from '@/utils/csv'
 export interface CountryMeme {
   countryCode: string
   imageFile: string
-  labelEn: string
-  labelFr: string
   imageUrl: string
 }
 
@@ -14,7 +12,6 @@ interface CountriesContext {
   ready: Ref<boolean>
   error: Ref<string | null>
   getCountry: (code: string) => CountryMeme | undefined
-  getLabel: (country: CountryMeme, locale: 'en' | 'fr') => string
 }
 
 const countriesKey: InjectionKey<CountriesContext> = Symbol('countries')
@@ -26,7 +23,7 @@ async function loadCountries(): Promise<Map<string, CountryMeme>> {
   }
 
   const rows = parseCsv(await response.text())
-  const records = rowsToObjects<'country_code' | 'image_file' | 'label_en' | 'label_fr'>(rows)
+  const records = rowsToObjects<'country_code' | 'image_file'>(rows)
 
   const map = new Map<string, CountryMeme>()
   for (const row of records) {
@@ -36,8 +33,6 @@ async function loadCountries(): Promise<Map<string, CountryMeme>> {
     map.set(countryCode, {
       countryCode,
       imageFile: row.image_file.trim(),
-      labelEn: row.label_en.trim(),
-      labelFr: row.label_fr.trim(),
       imageUrl: assetUrl(`images/${row.image_file.trim()}`),
     })
   }
@@ -61,10 +56,7 @@ export function provideCountries(): CountriesContext {
 
   const getCountry = (code: string) => countries.value.get(code.toUpperCase())
 
-  const getLabel = (country: CountryMeme, locale: 'en' | 'fr') =>
-    locale === 'fr' ? country.labelFr || country.labelEn : country.labelEn || country.labelFr
-
-  const context: CountriesContext = { countries, ready, error, getCountry, getLabel }
+  const context: CountriesContext = { countries, ready, error, getCountry }
   provide(countriesKey, context)
   return context
 }
@@ -75,4 +67,12 @@ export function useCountries(): CountriesContext {
     throw new Error('useCountries must be used after provideCountries')
   }
   return context
+}
+
+export function countryLabelKey(countryCode: string): string {
+  return `country.${countryCode.toUpperCase()}.label`
+}
+
+export function countryDescriptionKey(countryCode: string): string {
+  return `country.${countryCode.toUpperCase()}.description`
 }

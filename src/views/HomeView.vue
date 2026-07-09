@@ -1,17 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import LanguageSelector from '@/components/LanguageSelector.vue'
-import MemeModal from '@/components/MemeModal.vue'
 import WorldMap from '@/components/WorldMap.vue'
-import type { CountryMeme } from '@/composables/useCountries'
+import { useMemePreview } from '@/composables/useMemePreview'
 import { useLocalization } from '@/composables/useLocalization'
 
 const { t } = useLocalization()
-const selectedCountry = ref<CountryMeme | null>(null)
-
-function onSelectCountry(country: CountryMeme) {
-  selectedCountry.value = country
-}
+const { openPreview } = useMemePreview()
 </script>
 
 <template>
@@ -19,13 +13,14 @@ function onSelectCountry(country: CountryMeme) {
     <header class="home__header">
       <div>
         <h1>{{ t('site.title') }}</h1>
-        <p class="home__hint">{{ t('map.hover_hint') }} · {{ t('map.click_hint') }}</p>
+        <p class="home__hint">
+          {{ t('map.hover_hint') }} · {{ t('map.click_hint') }} · {{ t('map.open_country') }}
+        </p>
       </div>
       <LanguageSelector />
     </header>
 
-    <WorldMap @select="onSelectCountry" />
-    <MemeModal :country="selectedCountry" @close="selectedCountry = null" />
+    <WorldMap @select="openPreview" />
   </section>
 </template>
 

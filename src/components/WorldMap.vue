@@ -2,7 +2,7 @@
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import svgMap from 'svgmap'
 import 'svgmap/style'
-import { useCountries, type CountryMeme } from '@/composables/useCountries'
+import { countryLabelKey, useCountries, type CountryMeme } from '@/composables/useCountries'
 import { useLocalization } from '@/composables/useLocalization'
 
 const emit = defineEmits<{
@@ -11,14 +11,24 @@ const emit = defineEmits<{
 
 const mapContainer = ref<HTMLElement | null>(null)
 const mapElementId = `world-map-${Math.random().toString(36).slice(2)}`
+let mapInstance: svgMap | null = null
 
-const { countries, ready, error, getCountry, getLabel } = useCountries()
+const { countries, ready, error, getCountry } = useCountries()
 const { locale, t } = useLocalization()
 
+function clearMapTooltip() {
+  mapInstance?.hideTooltip()
+  mapContainer.value
+    ?.querySelectorAll('.svgMap-country.svgMap-active')
+    .forEach((element) => element.classList.remove('svgMap-active'))
+}
+
 function destroyMap() {
+  clearMapTooltip()
   if (mapContainer.value) {
     mapContainer.value.innerHTML = ''
   }
+  mapInstance = null
 }
 
 function buildMapValues() {
@@ -41,7 +51,7 @@ function buildTooltipContent(countryID: string): HTMLElement {
     return container
   }
 
-  const label = getLabel(country, locale.value)
+  const label = t(countryLabelKey(country.countryCode))
 
   const title = document.createElement('strong')
   title.textContent = label
@@ -67,7 +77,7 @@ function initMap() {
   destroyMap()
   mapContainer.value.id = mapElementId
 
-  new svgMap({
+  mapInstance = new svgMap({
     targetElementID: mapElementId,
     allowInteraction: true,
     colorMin: '#7c9cbf',
@@ -91,6 +101,7 @@ function initMap() {
       return buildTooltipContent(countryID)
     },
     onCountryClick(countryID) {
+      clearMapTooltip()
       const country = getCountry(countryID)
       if (country) {
         emit('select', country)

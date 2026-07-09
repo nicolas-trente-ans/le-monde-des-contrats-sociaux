@@ -1,5 +1,6 @@
 declare class svgMap {
   constructor(options: SvgMapOptions)
+  hideTooltip(): void
 }
 
 interface SvgMapOptions {

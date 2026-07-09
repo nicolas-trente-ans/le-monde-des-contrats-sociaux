@@ -58,10 +58,19 @@ export function rowsToObjects<T extends string>(rows: string[][]): Record<string
 }
 
 export function dataBaseUrl(): string {
-  const base = import.meta.env.VITE_DATA_BASE_URL || '/assets/'
-  return base.endsWith('/') ? base : `${base}/`
+  if (import.meta.env.VITE_DATA_BASE_URL) {
+    const base = import.meta.env.VITE_DATA_BASE_URL
+    return base.endsWith('/') ? base : `${base}/`
+  }
+
+  const baseUrl = import.meta.env.BASE_URL || '/'
+  return `${baseUrl}assets/`
 }
 
 export function assetUrl(relativePath: string): string {
   return `${dataBaseUrl()}${relativePath.replace(/^\//, '')}`
+}
+
+export function countryRoutePath(countryCode: string): string {
+  return `/country/${countryCode.toUpperCase()}`
 }

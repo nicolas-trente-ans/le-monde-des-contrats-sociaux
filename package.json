@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "copy-assets": "node scripts/copy-assets.mjs",
-    "dev": "yarn copy-assets && vite",
-    "build": "yarn copy-assets && vue-tsc -b && vite build && cp dist/index.html dist/404.html",
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build && cp dist/index.html dist/404.html",
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

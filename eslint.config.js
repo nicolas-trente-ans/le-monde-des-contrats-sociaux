@@ -7,7 +7,7 @@ import vueParser from 'vue-eslint-parser'
 
 export default tseslint.config(
   {
-    ignores: ['dist/**', 'node_modules/**', 'public/assets/**'],
+    ignores: ['dist/**', 'node_modules/**'],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,

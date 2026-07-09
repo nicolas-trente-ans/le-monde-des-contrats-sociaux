@@ -1,0 +1,17 @@
+key,en,fr
+site.title,The World of Social Contracts,Le monde des contrats sociaux
+nav.home,Home,Accueil
+nav.about,About,À propos
+map.hover_hint,Hover a country to preview,Survolez un pays pour un aperçu
+map.click_hint,Click a country to enlarge,Cliquez sur un pays pour l'agrandir
+map.open_country,Click again to open the country page,Cliquez à nouveau pour ouvrir la page du pays
+about.title,About,À propos
+about.body,"Explore how the ""Le contrat social — Nicolas, 30 ans"" meme varies by country. Hover a highlighted country for a preview, click to enlarge it, then click again to open its dedicated page.","Explorez comment le mème « Le contrat social — Nicolas, 30 ans » varie selon les pays. Survolez un pays surligné pour un aperçu, cliquez pour l'agrandir, puis cliquez à nouveau pour ouvrir sa page dédiée."
+notfound.title,Page not found,Page introuvable
+notfound.body,The page you requested does not exist.,La page demandée n'existe pas.
+notfound.back,Back to map,Retour à la carte
+map.no_meme,No meme available for this country.,Aucun mème disponible pour ce pays.
+country.back,Back to map,Retour à la carte
+country.loading,Loading country…,Chargement du pays…
+country.FR.label,France,France
+country.FR.description,"Nicolas, 30, sits at the center of France's social contract: welfare flows outward to Karim in Africa via Pôle emploi, CAF, RSA, and Western Union, while taxes fund Bernard and Chantal's retirement cruise through URSSAF, Sécurité sociale, and SeLoger.","Nicolas, 30 ans, est au centre du contrat social français : les aides sociales partent vers Karim en Afrique via Pôle emploi, CAF, RSA et Western Union, tandis que les impôts financent la croisière à la retraite de Bernard et Chantal via l'URSSAF, la Sécurité sociale et SeLoger."
