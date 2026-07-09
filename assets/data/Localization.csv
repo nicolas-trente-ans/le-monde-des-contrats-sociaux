@@ -1,0 +1,12 @@
+key,en,fr
+site.title,The World of Social Contracts,Le monde des contrats sociaux
+nav.home,Home,Accueil
+nav.about,About,À propos
+map.hover_hint,Hover a country to preview,Survolez un pays pour un aperçu
+map.click_hint,Click to view full meme,Cliquez pour voir le mème en entier
+about.title,About,À propos
+about.body,"Explore how the ""Le contrat social — Nicolas, 30 ans"" meme varies by country. Hover a highlighted country for a preview, then click to view the full image.","Explorez comment le mème « Le contrat social — Nicolas, 30 ans » varie selon les pays. Survolez un pays surligné pour un aperçu, puis cliquez pour voir l'image en entier."
+notfound.title,Page not found,Page introuvable
+notfound.body,The page you requested does not exist.,La page demandée n'existe pas.
+notfound.back,Back to map,Retour à la carte
+map.no_meme,No meme available for this country.,Aucun mème disponible pour ce pays.
