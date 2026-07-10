@@ -823,6 +823,23 @@ const favorablePaths = {
     'q14,b',
     'q15,a',
   ],
+  RO: [
+    'q01,a',
+    'q02,c',
+    'q03,a',
+    'q04,c',
+    'q05,b',
+    'q06,d',
+    'q07,b',
+    'q08,c',
+    'q09,d',
+    'q10,d',
+    'q11,b',
+    'q12,c',
+    'q13,b',
+    'q14,c',
+    'q15,a',
+  ],
 }
 
 test('clampScore keeps values within -5..5', () => {
