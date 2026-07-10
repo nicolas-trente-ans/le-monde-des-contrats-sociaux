@@ -86,10 +86,7 @@ export function provideQuiz(): QuizContext {
       error.value = err instanceof Error ? err.message : 'Failed to load quiz scores'
     })
 
-  const computeResult = (
-    selections: QuizSelections,
-    countryOrder: string[],
-  ): QuizResult | null => {
+  const computeResult = (selections: QuizSelections, countryOrder: string[]): QuizResult | null => {
     const totals = new Map<string, number>()
 
     for (const question of QUIZ_QUESTIONS) {

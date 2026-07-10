@@ -70,9 +70,16 @@ onUnmounted(() => {
         </header>
 
         <button
-type="button" class="meme-preview__image-button" :aria-label="t('map.open_country')"
-          @click="openCountryPage">
-          <img class="meme-preview__image" :src="country.imageUrl" :alt="t(countryLabelKey(country.countryCode))" />
+          type="button"
+          class="meme-preview__image-button"
+          :aria-label="t('map.open_country')"
+          @click="openCountryPage"
+        >
+          <img
+            class="meme-preview__image"
+            :src="country.imageUrl"
+            :alt="t(countryLabelKey(country.countryCode))"
+          />
           <span class="meme-preview__hint">{{ t('map.open_country') }}</span>
         </button>
       </div>
