@@ -10,7 +10,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "test": "node --test tests/",
+    "rebalance-quiz-scores": "node scripts/rebalance-quiz-scores.mjs"
   },
   "dependencies": {
     "svgmap": "^2.14.0",

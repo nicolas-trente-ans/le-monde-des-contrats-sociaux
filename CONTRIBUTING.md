@@ -46,6 +46,15 @@ q01,b,US,-1
 
 The quiz picks the country with the highest total score. Ties go to the country listed first in `countries.csv`.
 
+When adding quiz scores for a new country, do **not** copy France’s scores and only add positive deltas — that makes France almost unwinnable. Instead:
+
+- Use a **mixed baseline** (`FR`, `CN`, or an already-scored country) per country profile
+- Apply both **positive and negative** deltas so each country has strengths and blind spots
+- Run `yarn rebalance-quiz-scores` after editing profiles in [`public/assets/data/quiz_score_profiles.csv`](public/assets/data/quiz_score_profiles.csv)
+- Run `yarn test` to verify quiz score balancing
+
+See [`scripts/lib/quiz-score-rebalance.mjs`](scripts/lib/quiz-score-rebalance.mjs) for how profiles are applied.
+
 ### 5. Verify
 
 ```bash
