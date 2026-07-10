@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="The World of Social Contracts">
+  <rect width="32" height="32" rx="7" fill="#175cd3" />
+  <circle cx="16" cy="16" r="10" fill="#fff" />
+  <path
+    d="M8 12.25a8 2.75 0 0 1 16 0M8 19.75a8 2.75 0 0 0 16 0"
+    fill="none"
+    stroke="#175cd3"
+    stroke-width="1.1"
+    stroke-linecap="round"
+    opacity="0.28"
+  />
+  <path
+    d="M12.25 21.75V10.25h1.55l5.4 8.65V10.25h1.55v11.5h-1.55l-5.4-8.65v8.65z"
+    fill="#175cd3"
+  />
+</svg>
