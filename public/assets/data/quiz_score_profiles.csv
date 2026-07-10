@@ -214,3 +214,11 @@ CL,AR,q11,b,1
 CL,AR,q06,d,0
 CL,AR,q05,c,-1
 CL,AR,q03,d,-1
+CO,AR,q04,a,3
+CO,AR,q04,e,-1
+CO,AR,q03,b,3
+CO,AR,q09,e,1
+CO,AR,q08,c,1
+CO,AR,q05,c,-1
+CO,AR,q03,d,-1
+CO,AR,q11,b,-1
