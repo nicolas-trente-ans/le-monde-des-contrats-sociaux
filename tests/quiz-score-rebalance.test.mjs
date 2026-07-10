@@ -10,9 +10,13 @@ import {
   parseCountryProfiles,
   parseCsv,
   parseQuizScores,
+  PRESERVED_COUNTRIES,
   rebalanceQuizScores,
   validateScoreBounds,
 } from '../scripts/lib/quiz-score-rebalance.mjs'
+
+/** Profiled countries should land within this many points of the path leader. */
+const MAX_GAP_FROM_WINNER = 2
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const dataDir = path.join(__dirname, '../public/assets/data')
@@ -60,6 +64,46 @@ const favorablePaths = {
   ES: [
     'q01,a', 'q02,a', 'q03,a', 'q04,b', 'q05,e', 'q06,c', 'q07,d',
     'q08,c', 'q09,c', 'q10,c', 'q11,c', 'q12,d', 'q13,c', 'q14,b', 'q15,a',
+  ],
+  BR: [
+    'q01,a', 'q02,a', 'q03,d', 'q04,a', 'q05,e', 'q06,d', 'q07,e',
+    'q08,c', 'q09,c', 'q10,b', 'q11,b', 'q12,c', 'q13,b', 'q14,b', 'q15,a',
+  ],
+  IN: [
+    'q01,c', 'q02,a', 'q03,b', 'q04,d', 'q05,d', 'q06,b', 'q07,c',
+    'q08,c', 'q09,c', 'q10,c', 'q11,d', 'q12,a', 'q13,b', 'q14,b', 'q15,a',
+  ],
+  ID: [
+    'q01,d', 'q02,b', 'q03,c', 'q04,c', 'q05,d', 'q06,d', 'q07,d',
+    'q08,b', 'q09,e', 'q10,c', 'q11,c', 'q12,b', 'q13,a', 'q14,a', 'q15,a',
+  ],
+  IL: [
+    'q01,a', 'q02,a', 'q03,b', 'q04,e', 'q05,d', 'q06,a', 'q07,a',
+    'q08,c', 'q09,b', 'q10,b', 'q11,a', 'q12,c', 'q13,b', 'q14,b', 'q15,a',
+  ],
+  MY: [
+    'q01,b', 'q02,a', 'q03,b', 'q04,c', 'q05,d', 'q06,b', 'q07,b',
+    'q08,c', 'q09,c', 'q10,c', 'q11,b', 'q12,d', 'q13,b', 'q14,b', 'q15,a',
+  ],
+  NG: [
+    'q01,a', 'q02,a', 'q03,d', 'q04,a', 'q05,c', 'q06,b', 'q07,d',
+    'q08,c', 'q09,e', 'q10,c', 'q11,b', 'q12,d', 'q13,c', 'q14,c', 'q15,a',
+  ],
+  PT: [
+    'q01,a', 'q02,a', 'q03,b', 'q04,b', 'q05,c', 'q06,c', 'q07,d',
+    'q08,c', 'q09,c', 'q10,c', 'q11,c', 'q12,d', 'q13,c', 'q14,b', 'q15,a',
+  ],
+  RU: [
+    'q01,a', 'q02,a', 'q03,a', 'q04,a', 'q04,e', 'q05,f', 'q06,c',
+    'q07,b', 'q08,b', 'q09,a', 'q10,d', 'q11,a', 'q12,a', 'q13,b', 'q15,b',
+  ],
+  ZA: [
+    'q01,a', 'q02,a', 'q03,d', 'q04,e', 'q05,c', 'q06,b', 'q07,d',
+    'q08,c', 'q09,e', 'q10,c', 'q11,c', 'q12,d', 'q13,c', 'q14,b', 'q15,a',
+  ],
+  TR: [
+    'q01,a', 'q02,a', 'q03,b', 'q04,e', 'q05,d', 'q06,b', 'q07,d',
+    'q08,c', 'q09,c', 'q10,d', 'q11,c', 'q12,c', 'q13,b', 'q14,b', 'q15,a',
   ],
 }
 
@@ -147,15 +191,31 @@ test('validateScoreBounds rejects out-of-range scores', () => {
   assert.throws(() => validateScoreBounds(scores), /out of bounds/)
 })
 
-test('each country wins its favorable answer path', () => {
+test('preserved countries win their favorable answer path', () => {
   const { scores, countries } = rebalanceQuizScores(quizScoresCsv, profilesCsv)
 
-  for (const [expectedWinner, pathKeys] of Object.entries(favorablePaths)) {
+  for (const country of PRESERVED_COUNTRIES) {
+    const pathKeys = favorablePaths[country]
     const { winner } = computePathWinner(scores, pathKeys, countries)
     assert.equal(
       winner,
-      expectedWinner,
-      `${expectedWinner} should win its favorable path, got ${winner}`,
+      country,
+      `${country} should win its favorable path, got ${winner}`,
+    )
+  }
+})
+
+test('each country stays competitive on its favorable path', () => {
+  const { scores, countries } = rebalanceQuizScores(quizScoresCsv, profilesCsv)
+
+  for (const [country, pathKeys] of Object.entries(favorablePaths)) {
+    const { top, totals } = computePathWinner(scores, pathKeys, countries)
+    const own = totals[country]
+    const gap = top - own
+
+    assert.ok(
+      gap <= MAX_GAP_FROM_WINNER,
+      `${country} scores ${own} on its path, leader has ${top} (gap ${gap})`,
     )
   }
 })

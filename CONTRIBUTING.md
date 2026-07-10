@@ -51,7 +51,7 @@ When adding quiz scores for a new country, do **not** copy France’s scores and
 - Use a **mixed baseline** (`FR`, `CN`, or an already-scored country) per country profile
 - Apply both **positive and negative** deltas so each country has strengths and blind spots
 - Run `yarn rebalance-quiz-scores` after editing profiles in [`public/assets/data/quiz_score_profiles.csv`](public/assets/data/quiz_score_profiles.csv)
-- Run `yarn test` to verify quiz score balancing
+- Run `yarn test` to verify quiz score balancing. Tests require **France and China** to win their favorable paths; other countries only need to score within **2 points** of the leader on theirs (exact wins are optional and ties are fine).
 
 See [`scripts/lib/quiz-score-rebalance.mjs`](scripts/lib/quiz-score-rebalance.mjs) for how profiles are applied.
 
