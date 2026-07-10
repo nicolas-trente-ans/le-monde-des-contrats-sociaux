@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
 import WorldMap from '@/components/WorldMap.vue'
 import { useMemePreview } from '@/composables/useMemePreview'
 import { useLocalization } from '@/composables/useLocalization'
@@ -13,6 +14,10 @@ const { openPreview } = useMemePreview()
       <h1>{{ t('site.title') }}</h1>
       <p class="home__hint">
         {{ t('map.hover_hint') }} · {{ t('map.click_hint') }} · {{ t('map.open_country') }}
+      </p>
+      <p class="home__quiz-cta">
+        {{ t('home.quiz_cta_prefix') }}
+        <RouterLink to="/quiz">{{ t('home.quiz_cta_link') }}</RouterLink>
       </p>
     </header>
 
@@ -33,5 +38,20 @@ const { openPreview } = useMemePreview()
 .home__hint {
   margin: 0;
   color: #475467;
+}
+
+.home__quiz-cta {
+  margin: 0.75rem 0 0;
+  color: #475467;
+}
+
+.home__quiz-cta a {
+  color: #175cd3;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home__quiz-cta a:hover {
+  text-decoration: underline;
 }
 </style>

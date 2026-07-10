@@ -7,6 +7,7 @@ const options: { value: Locale; label: string }[] = [
   { value: 'en', label: 'English' },
   { value: 'fr', label: 'Français' },
   { value: 'hu', label: 'Magyar' },
+  { value: 'pirate', label: 'Pirate 🏴‍☠️' },
 ]
 </script>
 

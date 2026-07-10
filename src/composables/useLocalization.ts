@@ -1,13 +1,13 @@
 import { computed, inject, provide, ref, type ComputedRef, type InjectionKey, type Ref } from 'vue'
 import { assetUrl, parseCsv, rowsToObjects } from '@/utils/csv'
 
-export type Locale = 'en' | 'fr' | 'hu'
+export type Locale = 'en' | 'fr' | 'hu' | 'pirate'
 
 type LocalizationEntry = Record<Locale, string>
 type LocalizationMap = Record<string, LocalizationEntry>
 
 const LOCALE_KEY = 'nicolas-locale'
-const LOCALES: Locale[] = ['en', 'fr', 'hu']
+const LOCALES: Locale[] = ['en', 'fr', 'hu', 'pirate']
 
 interface LocalizationContext {
   locale: Ref<Locale>
@@ -34,10 +34,10 @@ async function loadLocalization(): Promise<LocalizationMap> {
   }
 
   const rows = parseCsv(await response.text())
-  const records = rowsToObjects<'key' | 'en' | 'fr' | 'hu'>(rows)
+  const records = rowsToObjects<'key' | 'en' | 'fr' | 'hu' | 'pirate'>(rows)
 
   return records.reduce<LocalizationMap>((acc, row) => {
-    acc[row.key] = { en: row.en, fr: row.fr, hu: row.hu }
+    acc[row.key] = { en: row.en, fr: row.fr, hu: row.hu, pirate: row.pirate }
     return acc
   }, {})
 }
