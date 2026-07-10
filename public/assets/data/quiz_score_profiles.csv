@@ -192,3 +192,10 @@ AT,DE,q05,b,1
 AT,DE,q11,e,2
 AT,DE,q04,b,-1
 AT,DE,q03,c,-1
+BG,DE,q05,b,2
+BG,DE,q03,a,1
+BG,DE,q11,b,2
+BG,DE,q04,a,1
+BG,DE,q06,c,1
+BG,DE,q04,b,-2
+BG,DE,q05,f,-1
