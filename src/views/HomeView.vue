@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import LanguageSelector from '@/components/LanguageSelector.vue'
 import WorldMap from '@/components/WorldMap.vue'
 import { useMemePreview } from '@/composables/useMemePreview'
 import { useLocalization } from '@/composables/useLocalization'
@@ -11,13 +10,10 @@ const { openPreview } = useMemePreview()
 <template>
   <section class="home">
     <header class="home__header">
-      <div>
-        <h1>{{ t('site.title') }}</h1>
-        <p class="home__hint">
-          {{ t('map.hover_hint') }} · {{ t('map.click_hint') }} · {{ t('map.open_country') }}
-        </p>
-      </div>
-      <LanguageSelector />
+      <h1>{{ t('site.title') }}</h1>
+      <p class="home__hint">
+        {{ t('map.hover_hint') }} · {{ t('map.click_hint') }} · {{ t('map.open_country') }}
+      </p>
     </header>
 
     <WorldMap @select="openPreview" />
@@ -26,10 +22,6 @@ const { openPreview } = useMemePreview()
 
 <style scoped>
 .home__header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
   margin-bottom: 1.25rem;
 }
 

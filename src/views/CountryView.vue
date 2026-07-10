@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, watch } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
-import LanguageSelector from '@/components/LanguageSelector.vue'
 import { countryDescriptionKey, countryLabelKey, useCountries } from '@/composables/useCountries'
 import { useLocalization } from '@/composables/useLocalization'
 
@@ -28,7 +27,6 @@ watch([ready, country], ([isReady, resolvedCountry]) => {
   <section class="country">
     <header class="country__header">
       <RouterLink class="country__back" to="/">{{ t('country.back') }}</RouterLink>
-      <LanguageSelector />
     </header>
 
     <p v-if="error" class="country__error">{{ error }}</p>
@@ -48,10 +46,6 @@ watch([ready, country], ([isReady, resolvedCountry]) => {
 
 <style scoped>
 .country__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
   margin-bottom: 1.25rem;
 }
 

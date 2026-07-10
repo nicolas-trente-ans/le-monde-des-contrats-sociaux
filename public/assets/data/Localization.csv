@@ -1,17 +1,113 @@
-key,en,fr
-site.title,The World of Social Contracts,Le monde des contrats sociaux
-nav.home,Home,Accueil
-nav.about,About,À propos
-map.hover_hint,Hover a country to preview,Survolez un pays pour un aperçu
-map.click_hint,Click a country to enlarge,Cliquez sur un pays pour l'agrandir
-map.open_country,Click again to open the country page,Cliquez à nouveau pour ouvrir la page du pays
-about.title,About,À propos
-about.body,"Explore how the ""Le contrat social — Nicolas, 30 ans"" meme varies by country. Hover a highlighted country for a preview, click to enlarge it, then click again to open its dedicated page.","Explorez comment le mème « Le contrat social — Nicolas, 30 ans » varie selon les pays. Survolez un pays surligné pour un aperçu, cliquez pour l'agrandir, puis cliquez à nouveau pour ouvrir sa page dédiée."
-notfound.title,Page not found,Page introuvable
-notfound.body,The page you requested does not exist.,La page demandée n'existe pas.
-notfound.back,Back to map,Retour à la carte
-map.no_meme,No meme available for this country.,Aucun mème disponible pour ce pays.
-country.back,Back to map,Retour à la carte
-country.loading,Loading country…,Chargement du pays…
-country.FR.label,France,France
-country.FR.description,"Nicolas, 30, sits at the center of France's social contract: welfare flows outward to Karim in Africa via Pôle emploi, CAF, RSA, and Western Union, while taxes fund Bernard and Chantal's retirement cruise through URSSAF, Sécurité sociale, and SeLoger.","Nicolas, 30 ans, est au centre du contrat social français : les aides sociales partent vers Karim en Afrique via Pôle emploi, CAF, RSA et Western Union, tandis que les impôts financent la croisière à la retraite de Bernard et Chantal via l'URSSAF, la Sécurité sociale et SeLoger."
+key,en,fr,hu
+site.title,The World of Social Contracts,Le monde des contrats sociaux,A társadalmi szerződések világa
+nav.home,Home,Accueil,Kezdőlap
+nav.about,About,À propos,Rólunk
+nav.quiz,Quiz,Quiz,Kvíz
+map.hover_hint,Hover a country to preview,Survolez un pays pour un aperçu,Vigye az egeret egy ország fölé az előnézethez
+map.click_hint,Click a country to enlarge,Cliquez sur un pays pour l'agrandir,Kattintson egy országra a nagyításhoz
+map.open_country,Click again to open the country page,Cliquez à nouveau pour ouvrir la page du pays,Kattintson újra az ország oldal megnyitásához
+about.title,About,À propos,Rólunk
+about.body,"Explore how the ""Le contrat social — Nicolas, 30 ans"" meme varies by country. Hover a highlighted country for a preview, click to enlarge it, then click again to open its dedicated page.","Explorez comment le mème « Le contrat social — Nicolas, 30 ans » varie selon les pays. Survolez un pays surligné pour un aperçu, cliquez pour l'agrandir, puis cliquez à nouveau pour ouvrir sa page dédiée.","Fedezze fel, hogyan változik az „Le contrat social — Nicolas, 30 ans” mém országonként. Vigye az egeret a kiemelt ország fölé az előnézethez, kattintson a nagyításhoz, majd kattintson újra a dedikált oldal megnyitásához."
+notfound.title,Page not found,Page introuvable,Az oldal nem található
+notfound.body,The page you requested does not exist.,La page demandée n'existe pas.,A kért oldal nem létezik.
+notfound.back,Back to map,Retour à la carte,Vissza a térképhez
+map.no_meme,No meme available for this country.,Aucun mème disponible pour ce pays.,Ehhez az országhoz nincs elérhető mém.
+country.back,Back to map,Retour à la carte,Vissza a térképhez
+country.loading,Loading country…,Chargement du pays…,Ország betöltése…
+country.FR.label,France,France,Franciaország
+country.FR.description,"Nicolas, 30, sits at the center of France's social contract: welfare flows outward to Karim in Africa via Pôle emploi, CAF, RSA, and Western Union, while taxes fund Bernard and Chantal's retirement cruise through URSSAF, Sécurité sociale, and SeLoger.","Nicolas, 30 ans, est au centre du contrat social français : les aides sociales partent vers Karim en Afrique via Pôle emploi, CAF, RSA et Western Union, tandis que les impôts financent la croisière à la retraite de Bernard et Chantal via l'URSSAF, la Sécurité sociale et SeLoger.","Nicolas, 30 éves, a francia társadalmi szerződés közepén ül: a juttatások Karim felé folynak Afrikába a Pôle emploi, CAF, RSA és Western Union útján, miközben az adók Bernard és Chantal nyugdíjas hajóútját finanszírozzák az URSSAF, a Sécurité sociale és a SeLoger révén."
+country.CN.label,China,Chine,Kína
+country.CN.description,"Zhang Weiyi, 30, sits at the center of China's 社会契约 — Laozi wrote of wu wei, but his descendants wrote of the budget. While ministry funds flow toward Ababəkri and Gyaltsen, China Aid reaches Eddy abroad, and the ancestors (苏云亭 and 古镜民, 70) collect their mahjong dues through SSF, Zhang practices the ancient art of doing everything so everyone else can do nothing. The Dao that can be taxed is not the eternal Dao.","Zhang Weiyi, 30 ans, est au centre du 社会契约 chinois — Laozi a écrit le wu wei, mais ses descendants ont écrit le budget. Pendant que le ministère des Finances alimente Ababəkri et Gyaltsen, que China Aid rejoint Eddy à l'étranger et que les ancêtres (苏云亭 et 古镜民, 70 ans) encaissent leur mahjong via le SSF, Zhang pratique l'art ancien de tout faire pour que les autres ne fassent rien. Le Dao qu'on peut taxer n'est pas le Dao éternel.","Zhang Weiyi, 30 éves, Kína 社会契约 közepén ül — Laozi a wu wei-t írt, de leszármazottai a költségvetést. Miközben a pénzügyminisztérium Ababəkri és Gyaltsen felé megy, a China Aid Eddyhez jut külföldön, az ősök (苏云亭 és 古镜民, 70) pedig az SSF-en keresztül mahjongoznak, Zhang a régi művészetét gyakorolja: mindent ő csinál, hogy mások semmit ne kelljen. Az adóztatható Dao nem az örök Dao."
+quiz.title,Which Nicolas are you?,Quel Nicolas êtes-vous ?,Melyik Nicolas vagy?
+quiz.subtitle,Answer 15 questions to find your Nicolas.,Répondez à 15 questions pour trouver votre Nicolas.,Válaszoljon 15 kérdésre, hogy megtalálja a Nicolasát.
+quiz.progress,Question {current} of {total},Question {current} sur {total},{current}. kérdés / {total}
+quiz.next,Next,Suivant,Következő
+quiz.finish,See my Nicolas,Voir mon Nicolas,Nézd meg a Nicolasomat
+quiz.loading,Loading quiz…,Chargement du quiz…,Kvíz betöltése…
+quiz.result.title,Your Nicolas is…,Votre Nicolas est…,A te Nicolasod…
+quiz.result.lead,You match {country}.,Vous correspondez à {country}.,{country} illik hozzád.
+quiz.result.score,Your Nicolas affinity score: {score},Votre score d'affinité Nicolas : {score},Nicolas-affinitásod pontszáma: {score}
+quiz.result.continue,Learn about your Nicolas,En savoir plus sur votre Nicolas,Tudj meg többet a Nicolasodról
+quiz.q01.question,What is the cheapest thing you rent?,Quelle est la chose la moins chère que vous louez ?,Mi a legolcsóbb dolog, amit bérelsz?
+quiz.q01.a,Apartment/Home,Appartement / Logement,Lakás / Otthon
+quiz.q01.b,Car/Transportation,Voiture / Transport,Autó / Közlekedés
+quiz.q01.c,Tools,Outils,Szerek
+quiz.q01.d,Event Supplies,Matériel d'événementiel,Rendezvényfelszerelés
+quiz.q01.e,Camping Gear,Matériel de camping,Campingfelszerelés
+quiz.q02.question,When you put your hands on your face do you?,Quand vous mettez vos mains sur votre visage vous…,Amikor a kezed az arcodra kerül…
+quiz.q02.a,Spread out your fingers,Écartez vos doigts,Széthúzod az ujjaidat
+quiz.q02.b,Avoid putting pressure on your eyes,Évitez de mettre la pression sur vos yeux,Kerülöd a szemre nehezedő nyomást
+quiz.q02.c,Push back the skin,Repoussez la peau,Visszanyomod a bőrt
+quiz.q02.d,Touch your nose,Toucher votre nez,Megérinted az orrod
+quiz.q03.question,"If you were to be taxed the same, who should get more?","Si vous étiez taxé de la même façon, qui devrait recevoir plus ?","Ha ugyanúgy adóznál, kinek kellene többet kapnia?"
+quiz.q03.a,The Elderly,Les personnes âgées,Az idősek
+quiz.q03.b,Refugees,Les réfugiés,A menekültek
+quiz.q03.c,Political Activists,Les activistes politiques,A politikai aktivisták
+quiz.q03.d,Homeless,Les sans-abri,A hajléktalanok
+quiz.q03.e,Animals,Les animaux,Az állatok
+quiz.q04.question,Which philosopher annoys you the most?,Quel philosophe vous agace le plus ?,Melyik filozófus bosszant a legjobban?
+quiz.q04.a,Karl Marx,Karl Marx,Karl Marx
+quiz.q04.b,Jean Jacques Rousseau,Jean-Jacques Rousseau,Jean-Jacques Rousseau
+quiz.q04.c,Jeremy Bentham,Jeremy Bentham,Jeremy Bentham
+quiz.q04.d,Hegel,Hegel,Hegel
+quiz.q04.e,Thomas Hobbes,Thomas Hobbes,Thomas Hobbes
+quiz.q04.f,Diogenes,Diogène,Diógenesz
+quiz.q05.question,Which continent is overrated?,Quel continent est surcoté ?,Melyik kontinens túlértékelt?
+quiz.q05.a,North America,Amérique du Nord,Észak-Amerika
+quiz.q05.b,Europe,Europe,Európa
+quiz.q05.c,Africa,Afrique,Afrika
+quiz.q05.d,Asia,Asie,Ázsia
+quiz.q05.e,South America,Amérique du Sud,Dél-Amerika
+quiz.q05.f,Australia or Antarctica,Australie ou Antarctique,Ausztrália vagy Antarktisz
+quiz.q06.question,What is your favorite type of homeless person?,Quel est votre type de sans-abri préféré ?,Melyik a kedvenc hajléktalan-típusod?
+quiz.q06.a,Schizophrenic,Schizophrène,Szkizofrén
+quiz.q06.b,Black,Noir,Fekete
+quiz.q06.c,Drunk Veteran,Vétéran alcoolique,Részeg veterán
+quiz.q06.d,Drug Addict,Toxicomane,Drogfüggő
+quiz.q07.question,Which Japanese city should've been nuked first?,Quelle ville japonaise aurait dû être bombardée en premier ?,Melyik japán várost kellett volna először atomozni?
+quiz.q07.a,Hiroshima,Hiroshima,Hiroshima
+quiz.q07.b,Nagasaki,Nagasaki,Nagasaki
+quiz.q07.c,Kyoto,Kyoto,Kyoto
+quiz.q07.d,Yokohama,Yokohama,Yokohama
+quiz.q07.e,Kokura,Kokura,Kokura
+quiz.q07.f,Niigata,Niigata,Niigata
+quiz.q08.question,What fake country is the most messed up?,Quel faux pays est le plus fou ?,Melyik hamis ország a legzavarosabb?
+quiz.q08.a,Kekistan,Kekistan,Kekisztán
+quiz.q08.b,Ancapistan,Ancapistan,Ancapistan
+quiz.q08.c,Pakistan,Pakistan,Pakisztán
+quiz.q08.d,Quebecistan,Quebecistan,Quebecisztán
+quiz.q08.e,New Yorkistan,New Yorkistan,New Yorkisztán
+quiz.q09.question,Is the Collatz Conjecture true or false?,La conjecture de Collatz est-elle vraie ou fausse ?,A Collatz-sejtés igaz vagy hamis?
+quiz.q09.a,True,Vraie,Igaz
+quiz.q09.b,False,Fausse,Hamis
+quiz.q09.c,Probviously true,Probablement vraie,Valószínűleg igaz
+quiz.q09.d,It's a conjecture!,C'est une conjecture!,Ez egy sejtés!
+quiz.q09.e,What?!,Quoi ?!,Mi?!
+quiz.q10.question,"The Finns, are they even human?","Les Finnois, sont-ils même humains ?","A finnek, egyáltalán emberek?"
+quiz.q10.a,Yes,Oui,Igen
+quiz.q10.b,No,Non,Nem
+quiz.q10.c,"Half-human, Half-finned creature","Moitié humain, moitié créature à nageoires","Félig ember, félig uszonyos lény"
+quiz.q10.d,No (reluctantly),Non (à regret),Nem (vonakodva)
+quiz.q11.question,"Jews, what are they made out of?","Les Juifs, de quoi sont-ils faits ?","A zsidók miből vannak?"
+quiz.q11.a,Human meat,Chair humaine,Emberi hús
+quiz.q11.b,Money,Argent,Pénz
+quiz.q11.c,I don't know. I just don't like it.,Je ne sais pas. Je n'aime juste pas ça.,Nem tudom. Csak nem tetszik.
+quiz.q11.d,Clay,Argile,Agyag
+quiz.q11.e,Light,Lumière,Fény
+quiz.q12.question,Is Artificial Intelligence Conscious?,L'intelligence artificielle est-elle consciente ?,Tudatos a mesterséges intelligencia?
+quiz.q12.a,What is Consciousness?,Qu'est-ce que la conscience ?,Mi a tudat?
+quiz.q12.b,"Yes, I asked it if it was.","Oui, je lui ai demandé si elle l'était.","Igen, megkérdeztem tőle."
+quiz.q12.c,No. It only generates the next word.,Non. Elle ne fait que générer le mot suivant.,Nem. Csak a következő szót generálja.
+quiz.q12.d,"I don't care, ask me questions about Nicolas","Je m'en fiche, posez-moi des questions sur Nicolas","Nem érdekel, kérdezz Nicolasról"
+quiz.q13.question,Are you gay? (For Nicolas 30 ans),Êtes-vous gay ? (Pour Nicolas 30 ans),Meleg vagy? (Nicolas 30 ans számára)
+quiz.q13.a,Yes,Oui,Igen
+quiz.q13.b,No,Non,Nem
+quiz.q13.c,I meant real questions.,Je voulais dire de vraies questions.,Igazi kérdésekre gondoltam.
+quiz.q13.d,"Yes, but also for men in general","Oui, mais aussi pour les hommes en général","Igen, de általában a férfiak miatt is"
+quiz.q14.question,"Are there any positive integers A, B, C, n with n > 2 such that A^n + B^n = C^n?","Existe-t-il des entiers positifs A, B, C, n avec n > 2 tels que A^n + B^n = C^n ?","Léteznek-e pozitív egész A, B, C, n számok n > 2 mellett, hogy A^n + B^n = C^n?"
+quiz.q14.a,Yes,Oui,Igen
+quiz.q14.b,No,Non,Nem
+quiz.q14.c,"I have discovered a truly marvelous demonstration of this proposition, which this quiz is too narrow to contain","J'ai découvert une démonstration vraiment merveilleuse de cette proposition, que ce quiz est trop étroit pour contenir","Felfedeztem ennek az állításnak egy csodálatos bizonyítását, amelyet ez a kvíz túl szűk ahhoz, hogy befogadja"
+quiz.q15.question,Did you enjoy this quiz?,Avez-vous apprécié ce quiz ?,Élvezted ezt a kvízt?
+quiz.q15.a,Yes,Oui,Igen
+quiz.q15.b,No,Non,Nem

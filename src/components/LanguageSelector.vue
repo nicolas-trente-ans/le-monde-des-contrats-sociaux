@@ -6,6 +6,7 @@ const { locale, setLocale } = useLocalization()
 const options: { value: Locale; label: string }[] = [
   { value: 'en', label: 'English' },
   { value: 'fr', label: 'Français' },
+  { value: 'hu', label: 'Magyar' },
 ]
 </script>
 

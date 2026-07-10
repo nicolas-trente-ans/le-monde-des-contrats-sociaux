@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import LanguageSelector from '@/components/LanguageSelector.vue'
 import { useLocalization } from '@/composables/useLocalization'
 
 const { t } = useLocalization()
@@ -8,9 +9,13 @@ const { t } = useLocalization()
 <template>
   <nav class="navbar">
     <RouterLink class="navbar__brand" to="/">{{ t('site.title') }}</RouterLink>
-    <div class="navbar__links">
-      <RouterLink to="/">{{ t('nav.home') }}</RouterLink>
-      <RouterLink to="/about">{{ t('nav.about') }}</RouterLink>
+    <div class="navbar__actions">
+      <div class="navbar__links">
+        <RouterLink to="/">{{ t('nav.home') }}</RouterLink>
+        <RouterLink to="/quiz">{{ t('nav.quiz') }}</RouterLink>
+        <RouterLink to="/about">{{ t('nav.about') }}</RouterLink>
+      </div>
+      <LanguageSelector />
     </div>
   </nav>
 </template>
@@ -29,6 +34,14 @@ const { t } = useLocalization()
 .navbar__brand {
   font-weight: 700;
   text-decoration: none;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .navbar__links {
