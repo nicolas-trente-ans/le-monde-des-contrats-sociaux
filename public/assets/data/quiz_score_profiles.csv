@@ -207,3 +207,10 @@ KH,ID,q11,b,3
 KH,ID,q06,d,1
 KH,ID,q05,c,-1
 KH,ID,q01,d,-1
+CL,AR,q03,b,3
+CL,AR,q05,a,2
+CL,AR,q05,e,0
+CL,AR,q11,b,1
+CL,AR,q06,d,0
+CL,AR,q05,c,-1
+CL,AR,q03,d,-1
