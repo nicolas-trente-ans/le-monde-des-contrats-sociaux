@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import NavBar from '@/components/NavBar.vue'
+import AppFooter from '@/components/AppFooter.vue'
 import MemePreview from '@/components/MemePreview.vue'
 import { provideCountries } from '@/composables/useCountries'
 import { provideLocalization } from '@/composables/useLocalization'
@@ -24,6 +25,7 @@ router.afterEach(() => {
     <main class="main">
       <router-view />
     </main>
+    <AppFooter />
     <MemePreview :country="previewCountry" @close="closePreview" />
   </div>
 </template>
