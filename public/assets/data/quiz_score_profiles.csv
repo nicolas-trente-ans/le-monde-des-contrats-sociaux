@@ -240,3 +240,11 @@ DO,ES,q11,b,1
 DO,ES,q05,e,0
 DO,ES,q04,b,-2
 DO,ES,q05,c,-1
+FI,DK,q10,d,4
+FI,DK,q05,c,3
+FI,DK,q03,b,2
+FI,DK,q11,e,1
+FI,DK,q12,a,1
+FI,DK,q05,b,-2
+FI,DK,q10,c,-1
+FI,DK,q13,d,-1
