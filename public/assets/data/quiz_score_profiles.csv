@@ -279,3 +279,16 @@ IS,FI,q06,b,1
 IS,FI,q05,c,-2
 IS,FI,q10,d,-2
 IS,FI,q11,e,-1
+IQ,TR,q08,c,3
+IQ,TR,q03,a,3
+IQ,TR,q06,c,2
+IQ,TR,q07,b,2
+IQ,TR,q11,a,2
+IQ,TR,q09,e,1
+IQ,TR,q03,b,-2
+IQ,TR,q04,e,-1
+IQ,TR,q10,d,-1
+IQ,TR,q11,b,-2
+IQ,TR,q11,c,-1
+IQ,TR,q01,b,-2
+IQ,TR,q10,c,-1
