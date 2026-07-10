@@ -343,3 +343,16 @@ LB,IL,q03,b,-2
 LB,IL,q07,a,-2
 LB,IL,q05,d,-1
 LB,IL,q08,c,-1
+MX,ES,q07,f,3
+MX,ES,q08,a,3
+MX,ES,q09,d,2
+MX,ES,q03,a,2
+MX,ES,q06,d,2
+MX,ES,q04,c,2
+MX,ES,q01,b,2
+MX,ES,q02,c,1
+MX,ES,q05,e,-1
+MX,ES,q04,b,-2
+MX,ES,q08,c,-1
+MX,ES,q11,c,-1
+MX,ES,q05,a,-2
