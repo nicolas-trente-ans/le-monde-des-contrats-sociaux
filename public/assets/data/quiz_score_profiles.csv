@@ -356,3 +356,16 @@ MX,ES,q04,b,-2
 MX,ES,q08,c,-1
 MX,ES,q11,c,-1
 MX,ES,q05,a,-2
+MA,FR,q05,b,3
+MA,FR,q11,b,2
+MA,FR,q06,b,2
+MA,FR,q07,c,2
+MA,FR,q08,b,2
+MA,FR,q10,d,1
+MA,FR,q04,e,1
+MA,FR,q05,c,-2
+MA,FR,q04,b,-2
+MA,FR,q06,c,-2
+MA,FR,q08,d,-2
+MA,FR,q11,c,-1
+MA,FR,q12,d,-1
