@@ -14,3 +14,17 @@ US,us.james,us.social_security,relation.taxes_fund
 US,us.social_security,us.phil_deborah,relation.funds
 US,us.medicare,us.phil_deborah,relation.supports
 US,us.phil_deborah,mx,relation.retires_to
+AO,ao.pedro,ao.sonangol,relation.funds
+AO,ao.sonangol,ao.government,relation.funds
+AO,ao.pedro,ao.black_tax,relation.supports
+AO,ao.black_tax,ao.gunza,relation.flows_to
+AO,ao.black_tax,ao.family,relation.flows_to
+AO,ao.pedro,ao.agt,relation.taxes_fund
+AO,ao.agt,ao.government,relation.funds
+AO,ao.pedro,ao.government,relation.taxes_fund
+AO,ao.government,ao.jlo,relation.funds
+AO,ao.government,ao.acj,relation.funds
+AO,ao.government,ao.kwenda,relation.funds
+AO,ao.kwenda,ao.turma_caop,relation.supports
+AO,ao.government,ao.moxico,relation.flows_to
+AO,ao.jlo,ao.anelka,relation.flows_to
