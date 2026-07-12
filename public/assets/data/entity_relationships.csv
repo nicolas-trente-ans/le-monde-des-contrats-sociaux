@@ -1,0 +1,14 @@
+country_code,from_entity_id,to_entity_id,relationship_key
+US,us.james,us.usaid,relation.funds
+US,us.usaid,il,relation.flows_to
+US,us.james,us.dream_act,relation.funds
+US,us.james,us.hud,relation.funds
+US,us.dream_act,us.jose,relation.supports
+US,us.hud,us.jose,relation.supports
+US,us.jose,us.latin_america,relation.remits_to
+US,us.james,us.snap,relation.taxes_fund
+US,us.snap,us.tysheeqa,relation.supports
+US,us.james,us.social_security,relation.taxes_fund
+US,us.social_security,us.phil_deborah,relation.funds
+US,us.medicare,us.phil_deborah,relation.supports
+US,us.phil_deborah,mx,relation.retires_to

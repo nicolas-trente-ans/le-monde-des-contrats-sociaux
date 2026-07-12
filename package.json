@@ -12,7 +12,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "node --test tests/",
-    "rebalance-quiz-scores": "node scripts/rebalance-quiz-scores.mjs"
+    "rebalance-quiz-scores": "node scripts/rebalance-quiz-scores.mjs",
+    "validate-entities": "node scripts/validate-entities.mjs"
   },
   "dependencies": {
     "svgmap": "^2.14.0",

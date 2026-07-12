@@ -3,7 +3,7 @@ site.title,The World of Social Contracts,Le monde des contrats sociaux,A társad
 nav.home,Home,Accueil,Kezdőlap,Home Port
 nav.about,About,À propos,Rólunk,Ship's Log
 nav.quiz,Quiz,Quiz,Kvíz,Cap'n's Quiz
-footer.contribute,Contribute on GitHub,Contribuer sur GitHub,Közreműködés a GitHubon,Contribute on GitHub, matey
+footer.contribute,Contribute on GitHub,Contribuer sur GitHub,Közreműködés a GitHubon,"Contribute on GitHub, matey"
 map.hover_hint,Hover a country to preview,Survolez un pays pour un aperçu,Vigye az egeret egy ország fölé az előnézethez,"Hover yer spyglass o'er a land fer a preview, matey"
 map.click_hint,Click a country to enlarge,Cliquez sur un pays pour l'agrandir,Kattintson egy országra a nagyításhoz,"Click a land ta enlarge it, ye scallywag"
 map.open_country,Click again to open the country page,Cliquez à nouveau pour ouvrir la page du pays,Kattintson újra az ország oldal megnyitásához,"Click again ta open th' country page, arr!"
@@ -125,6 +125,52 @@ country.UA.label,Ukraine,Ukraine,Ukrajna,Ukraine
 country.UA.description,"Andrii, 22, sits at the center of Ukraine's social contract: PUMB and the Pension Fund reach Rinat, 58, through bribery as Grain from Ukraine routes Nkebi and Joseph Kony past Django and Olena's Roma family; Petro, 19, sends arrows toward Volodymyr's piano and a neon soldier saying добрий вечір past Budanov, Dmytro, Serhii, and Volodymyr in police blues.","Andrii, 22 ans, est au centre du contrat social ukrainien : PUMB et le Fonds des pensions atteignent Rinat, 58 ans, via la corruption tandis que Grain from Ukraine achemine Nkebi et Joseph Kony au-delà de la famille rom de Django et Olena ; Petro, 19 ans, envoie des flèches vers le piano de Volodymyr et un soldat néon disant добрий вечір au-delà de Budanov, Dmytro, Serhii et Volodymyr en bleu de police.","Andrii, 22 éves, Ukrajna társadalmi szerződésének közepén ül: a PUMB és a Nyugdíjalap Rinaton, 58 éves, eléri a korrupción keresztül, miközben a Grain from Ukraine Nkebit és Joseph Konyt Django és Olena roma családja mellett irányítja; Petro, 19 éves, nyilakat küld Volodymyr zongorája és egy neon katonája felé, aki azt mondja: добрий вечір, Budanov, Dmytro, Serhii és Volodymyr rendőrkék mellett.","Andrii, 22, sits at th' heart o' Ukraine's social contract: PUMB an' th' Pension Fund reach Rinat, 58, through bribery as Grain from Ukraine routes Nkebi an' Joseph Kony past Django an' Olena's Roma family; Petro, 19, sends arrows toward Volodymyr's piano an' a neon soldier sayin' добрий вечір past Budanov, Dmytro, Serhii, an' Volodymyr in police blues, arr!"
 country.VE.label,Venezuela,Venezuela,Venezuela,Venezuela
 country.VE.description,"Richar, 27, sits at the center of Venezuela's El contrato social: CLAP and SENIAT reach PDVSA and SEBIN while Berkis, 69, Yorgel and Ana, and Astroberto draw P.A.N. and Free Fire past Yorgendenson's BERA; Richar sends a green line to Andreydis as Malandro papeado and Cocainomano route Paraísos fiscales past Cuba, Bolívar, and X toward Switzerland and Panama.","Richar, 27 ans, est au centre de l'El contrato social vénézuélien : CLAP et SENIAT atteignent PDVSA et SEBIN tandis que Berkis, 69 ans, Yorgel et Ana, et Astroberto tirent P.A.N. et Free Fire au-delà de la BERA de Yorgendenson ; Richar envoie une ligne verte vers Andreydis tandis que Malandro papeado et Cocainomano achemine Paraísos fiscales au-delà de Cuba, Bolívar et X vers la Suisse et Panama.","Richar, 27 éves, Venezuela El contrato social-jának közepén ül: a CLAP és a SENIAT eléri a PDVSA-t és a SEBIN-t, miközben Berkis, 69 éves, Yorgel és Ana, valamint Astroberto P.A.N.-t és Free Fire-t von el Yorgendenson BERA-ja mellett; Richar zöld vonalat küld Andreydis felé, miközben Malandro papeado és Cocainomano Paraísos fiscales-t irányít Kuba, Bolívar és X mellett Svájc és Panama felé.","Richar, 27, sits at th' heart o' Venezuela's El contrato social: CLAP an' SENIAT reach PDVSA an' SEBIN while Berkis, 69, Yorgel an' Ana, an' Astroberto draw P.A.N. an' Free Fire past Yorgendenson's BERA; Richar sends a green line ta Andreydis as Malandro papeado an' Cocainomano route Paraísos fiscales past Cuba, Bolívar, an' X toward Switzerland an' Panama, arr!"
+settings.language,Language,Langue,Nyelv,Language
+reference.wikipedia,Wikipedia,Wikipédia,Wikipédia,Wikipedia
+reference.grokipedia,Grokipedia,Grokipedia,Grokipedia,Grokipedia
+reference.britannica,Britannica,Britannica,Britannica,Britannica
+country.entities.title,Explore the meme,Explorer le mème,Fedezze fel a mémet,Explore th' meme
+country.entities.tier,Tier {tier},Niveau {tier},{tier}. szint,Tier {tier}
+country.entities.tier.1,Central figure,Figure centrale,Központi alak,Central figure
+country.entities.tier.2,Programs & institutions,Programmes et institutions,Programok és intézmények,Programs an' institutions
+country.entities.tier.3,People & places,Gens et lieux,Emberek és helyek,People an' places
+country.entities.related_contract,Related social contract,Contrat social lié,Kapcsolódó társadalmi szerződés,Related social contract
+country.entities.further_reading,Further reading,Pour aller plus loin,További olvasnivaló,Further readin'
+country.entities.relationships,Relationships in the meme,Relations dans le mème,Kapcsolatok a mémben,Relationships in th' meme
+country.entities.preview.loading,Loading preview…,Chargement de l'aperçu…,Előnézet betöltése…,Loadin' preview…
+country.entities.preview.unavailable,No preview available for this source.,Aucun aperçu disponible pour cette source.,Ehhez a forráshoz nincs előnézet.,No preview fer this source.
+relation.funds,funds,finance,finanszíroz,funds
+relation.flows_to,flows to,va vers,áramlik,flows ta
+relation.taxes_fund,taxes fund,impôts financent,adók finanszíroznak,taxes fund
+relation.supports,supports,soutient,támogat,supports
+relation.remits_to,remits to,envoie vers,utal,remits ta
+relation.retires_to,retires to,part en retraite vers,nyugdíjba megy,retires ta
+entity.us.james.name,"James, 30","James, 30 ans","James, 30","James, 30"
+entity.us.james.description,The stressed taxpayer at the center of America's social contract.,Le contribuable stressé au centre du contrat social américain.,Az amerikai társadalmi szerződés stresszes adófizetője a középpontban.,Th' stressed taxpayer at th' heart o' America's social contract.
+entity.us.usaid.name,USAID,USAID,USAID,USAID
+entity.us.usaid.description,U.S. foreign aid agency whose funds flow abroad from the American people.,Agence d'aide étrangère américaine dont les fonds partent à l'étranger.,"Az amerikai külsegélyügynökség, amelynek pénze külföldre áramlik.",U.S. foreign aid agency whose doubloons flow ta foreign seas.
+entity.us.dream_act.name,DREAM Act,DREAM Act,DREAM Act,DREAM Act
+entity.us.dream_act.description,Proposed path to legal status for undocumented youth brought to the U.S. as children.,Voie proposée vers un statut légal pour les jeunes sans papiers arrivés enfants aux États-Unis.,Javasolt jogállás az USA-ba gyerekként érkezett fiataloknak.,Proposed path ta legal status fer undocumented youth brought ta th' U.S. as children.
+entity.us.hud.name,HUD,HUD,Lakhatási minisztérium,HUD
+entity.us.hud.description,U.S. Department of Housing and Urban Development supporting housing programs.,Ministère américain du Logement et du Développement urbain.,Az amerikai lakhatási és városfejlesztési minisztérium.,U.S. Department o' Housing an' Urban Development.
+entity.us.snap.name,SNAP,SNAP,SNAP,SNAP
+entity.us.snap.description,Supplemental Nutrition Assistance Program — food benefits for low-income Americans.,Programme d'aide alimentaire complémentaire pour les Américains à faibles revenus.,Kiegészítő táplálkozási segélyprogram alacsony jövedelmű amerikaiaknak.,Supplemental Nutrition Assistance Program — food benefits fer low-income Americans.
+entity.us.social_security.name,Social Security,Sécurité sociale,Social Security,Social Security
+entity.us.social_security.description,Federal retirement and disability insurance funded by payroll taxes.,Assurance retraite et invalidité fédérale financée par les cotisations.,Szövetségi nyugdíj- és rokkantságbiztosítás járulékokból.,Federal retirement an' disability insurance funded by payroll taxes.
+entity.us.medicare.name,Medicare,Medicare,Medicare,Medicare
+entity.us.medicare.description,Federal health insurance program for Americans aged 65 and older.,Assurance-maladie fédérale pour les Américains de 65 ans et plus.,Szövetségi egészségbiztosítás 65 éves és idősebb amerikaiaknak.,Federal health insurance fer Americans aged 65 an' older.
+entity.us.jose.name,"Jose, 25","Jose, 25 ans","Jose, 25","Jose, 25"
+entity.us.jose.description,Young immigrant supported by housing programs who sends remittances toward Latin America.,Jeune immigré soutenu par les programmes de logement qui envoie des fonds vers l'Amérique latine.,"A lakhatási programok által támogatott fiatal bevándorló, aki Latin-Amerikába utal.",Young immigrant supported by housing programs who sends remittances toward Latin America.
+entity.us.tysheeqa.name,"Tysheeqa, 39","Tysheeqa, 39 ans","Tysheeqa, 39","Tysheeqa, 39"
+entity.us.tysheeqa.description,SNAP beneficiary drawing nutrition assistance from the social contract.,Bénéficiaire du SNAP tirant l'aide alimentaire du contrat social.,"SNAP-kedvezményezett, aki táplálkozási segélyt kap.",SNAP beneficiary drawin' nutrition assistance from th' social contract.
+entity.us.phil_deborah.name,"Phil & Deborah, 70","Phil et Deborah, 70 ans","Phil és Deborah, 70","Phil an' Deborah, 70"
+entity.us.phil_deborah.description,Retired couple collecting Social Security and Medicare before heading to Mexico in their RV.,Couple retraité touchant la Sécurité sociale et Medicare avant de partir au Mexique en camping-car.,"Nyugdíjas pár, akik Social Security-t és Medicare-et kapnak, mielőtt kempingautóval Mexikóba mennének.",Retired couple collectin' Social Security an' Medicare afore headin' ta Mexico in their RV.
+entity.il.name,Israel,Israël,Izrael,Israel
+entity.il.description,Destination of U.S. foreign aid in the meme's international flow.,Destination de l'aide étrangère américaine dans le flux international du mème.,Az amerikai külsegély célpontja a mém nemzetközi áramlásában.,Destination o' U.S. foreign aid in th' meme's international flow.
+entity.mx.name,Mexico,Mexique,Mexikó,Mexico
+entity.mx.description,Retirement destination for Phil and Deborah past the southern border.,Destination de retraite pour Phil et Deborah au-delà de la frontière sud.,Phil és Deborah nyugdíjas célpontja a déli határon túl.,Retirement destination fer Phil an' Deborah past th' southern border.
+entity.us.latin_america.name,Latin America,Amérique latine,Latin-Amerika,Latin America
+entity.us.latin_america.description,Region receiving remittances from Jose in the meme's southern flow.,Région recevant les envois de fonds de Jose dans le flux sud du mème.,"A régió, ahová Jose pénzt küld a mém déli áramlásában.",Region receivin' remittances from Jose in th' meme's southern flow.
 quiz.title,Which Nicolas are you?,Quel Nicolas êtes-vous ?,Melyik Nicolas vagy?,Which Nicolas be ye?
 quiz.subtitle,Answer 15 questions to find your Nicolas.,Répondez à 15 questions pour trouver votre Nicolas.,Válaszoljon 15 kérdésre,"Answer 15 questions ta find yer Nicolas, ye scurvy dog."
 quiz.progress,Question {current} of {total},Question {current} sur {total},{current}. kérdés / {total},Question {current} o' {total}

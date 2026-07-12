@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import { computed, watch } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
+import EntityRelationshipList from '@/components/EntityRelationshipList.vue'
+import EntityTierSection from '@/components/EntityTierSection.vue'
 import { countryDescriptionKey, countryLabelKey, useCountries } from '@/composables/useCountries'
+import type { Entity } from '@/composables/useEntities'
+import { useEntities } from '@/composables/useEntities'
 import { useLocalization } from '@/composables/useLocalization'
 
 const route = useRoute()
 const router = useRouter()
 const { ready, error, getCountry } = useCountries()
+const { ready: entitiesReady, getEntitiesForCountry, getRelationshipsForCountry } = useEntities()
 const { t } = useLocalization()
 
 const countryCode = computed(() => String(route.params.code ?? '').toUpperCase())
@@ -15,6 +20,26 @@ const country = computed(() => {
   if (!ready.value) return undefined
   return getCountry(countryCode.value)
 })
+
+const entityGroups = computed(() => {
+  if (!entitiesReady.value) return []
+  return getEntitiesForCountry(countryCode.value)
+})
+
+const relationships = computed(() => {
+  if (!entitiesReady.value) return []
+  return getRelationshipsForCountry(countryCode.value)
+})
+
+const hasEntities = computed(() => entityGroups.value.length > 0)
+
+function entitiesForTier(tier: number): Entity[] {
+  return entityGroups.value.find((group) => group.tier === tier)?.entities ?? []
+}
+
+const tier1Entities = computed(() => entitiesForTier(1))
+const tier2Entities = computed(() => entitiesForTier(2))
+const tier3Entities = computed(() => entitiesForTier(3))
 
 watch([ready, country], ([isReady, resolvedCountry]) => {
   if (isReady && !resolvedCountry) {
@@ -34,19 +59,56 @@ watch([ready, country], ([isReady, resolvedCountry]) => {
 
     <article v-else-if="country" class="country__content">
       <h1>{{ t(countryLabelKey(country.countryCode)) }}</h1>
-      <p class="country__description">{{ t(countryDescriptionKey(country.countryCode)) }}</p>
-      <img
-        class="country__image"
-        :src="country.imageUrl"
-        :alt="t(countryLabelKey(country.countryCode))"
-      />
+
+      <div v-if="hasEntities" class="country__explorer">
+        <div class="country__hero">
+          <div class="country__center">
+            <img
+              class="country__image"
+              :src="country.imageUrl"
+              :alt="t(countryLabelKey(country.countryCode))"
+            />
+            <p class="country__description">{{ t(countryDescriptionKey(country.countryCode)) }}</p>
+          </div>
+
+          <aside v-if="tier1Entities.length > 0 || tier2Entities.length > 0" class="country__aside">
+            <EntityTierSection
+              v-if="tier1Entities.length > 0"
+              :tier="1"
+              :entities="tier1Entities"
+              compact
+            />
+            <EntityTierSection
+              v-if="tier2Entities.length > 0"
+              :tier="2"
+              :entities="tier2Entities"
+              compact
+            />
+          </aside>
+        </div>
+
+        <div v-if="tier3Entities.length > 0" class="country__below">
+          <EntityTierSection :tier="3" :entities="tier3Entities" compact />
+        </div>
+
+        <EntityRelationshipList :relationships="relationships" />
+      </div>
+
+      <template v-else>
+        <img
+          class="country__image"
+          :src="country.imageUrl"
+          :alt="t(countryLabelKey(country.countryCode))"
+        />
+        <p class="country__description">{{ t(countryDescriptionKey(country.countryCode)) }}</p>
+      </template>
     </article>
   </section>
 </template>
 
 <style scoped>
 .country__header {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .country__back {
@@ -60,22 +122,55 @@ watch([ready, country], ([isReady, resolvedCountry]) => {
 }
 
 .country__content h1 {
-  margin: 0 0 0.75rem;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin: 0 0 1rem;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
 }
 
-.country__description {
-  margin: 0 0 1.25rem;
-  max-width: 70ch;
-  color: #344054;
+.country__explorer {
+  max-width: 1200px;
+}
+
+.country__hero {
+  display: grid;
+  grid-template-columns: minmax(280px, 2.5fr) minmax(180px, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.country__aside {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.country__center {
+  min-width: 0;
 }
 
 .country__image {
   display: block;
-  width: min(960px, 100%);
+  width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 8px 24px rgb(16 24 40 / 12%);
+  box-shadow: 0 6px 18px rgb(16 24 40 / 10%);
+}
+
+.country__description {
+  margin: 0.65rem 0 0;
+  color: #475467;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.country__below {
+  margin-top: 0.85rem;
+}
+
+.country__below :deep(.entity-tier__list) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.4rem;
 }
 
 .country__loading,
@@ -85,5 +180,17 @@ watch([ready, country], ([isReady, resolvedCountry]) => {
 
 .country__error {
   color: #b42318;
+}
+
+@media (max-width: 960px) {
+  .country__hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .country__below :deep(.entity-tier__list) {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

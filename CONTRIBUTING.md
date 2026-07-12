@@ -62,3 +62,62 @@ yarn dev
 ```
 
 Check the map (hover/click), the country page (`/country/XX`), and the quiz if you added scores.
+
+## Adding entities to a country (meme exploration)
+
+Entity data lets visitors explore people, programs, and relationships on a country page. **Only the United States is fully populated in the pilot**; other countries can be added using the same workflow.
+
+### 1. Register entities
+
+Add rows to [`public/assets/data/entities.csv`](public/assets/data/entities.csv):
+
+```csv
+entity_id,name_key,description_key,image_file,wikipedia_title,grokipedia_url,britannica_url,linked_country_code
+us.james,entity.us.james.name,entity.us.james.description,,,,
+us.medicare,entity.us.medicare.name,entity.us.medicare.description,,Medicare_(United_States),,,
+il,entity.il.name,entity.il.description,,Israel,,,IL
+```
+
+- `entity_id` — stable slug (`us.james` for country-specific; bare ISO code when the entity is another country's social contract)
+- `name_key` / `description_key` — localization keys (convention: `entity.{entity_id}.name` / `.description`)
+- `image_file` — optional, placed in `public/assets/images/entities/`
+- `wikipedia_title` — article title for live preview (underscores for spaces)
+- `grokipedia_url` / `britannica_url` — optional “further reading” links
+- `linked_country_code` — optional ISO code; renders a link to `/country/{code}`
+
+### 2. Map entities to a country
+
+Add rows to [`public/assets/data/country_entities.csv`](public/assets/data/country_entities.csv):
+
+```csv
+country_code,entity_id,tier,priority
+US,us.james,1,10
+US,us.medicare,2,30
+```
+
+- `tier` — section on the country page (1 = central figure, 2 = programs, 3 = people/places)
+- `priority` — sort order within the tier (lower = earlier)
+
+### 3. Add relationships (optional)
+
+Add rows to [`public/assets/data/entity_relationships.csv`](public/assets/data/entity_relationships.csv):
+
+```csv
+country_code,from_entity_id,to_entity_id,relationship_key
+US,us.james,us.medicare,relation.taxes_fund
+```
+
+Add localized edge labels to [`public/assets/data/Localization.csv`](public/assets/data/Localization.csv) (e.g. `relation.taxes_fund`).
+
+### 4. Add localization strings
+
+For each entity, add `name` and `description` keys in all four locales (`en`, `fr`, `hu`, `pirate`) before `quiz.title` in `Localization.csv`.
+
+UI keys used by the entity explorer: `country.entities.*`, `settings.*`, `reference.*`, `relation.*`.
+
+### 5. Validate
+
+```bash
+yarn validate-entities
+yarn test
+```

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useLocalization, type Locale } from '@/composables/useLocalization'
 
-const { locale, setLocale } = useLocalization()
+const { locale, setLocale, t } = useLocalization()
 
 const options: { value: Locale; label: string }[] = [
   { value: 'en', label: 'English' },
@@ -13,7 +13,7 @@ const options: { value: Locale; label: string }[] = [
 
 <template>
   <label class="language-selector">
-    <span class="language-selector__label">Language</span>
+    <span class="language-selector__label">{{ t('settings.language') }}</span>
     <select
       :value="locale"
       @change="setLocale(($event.target as HTMLSelectElement).value as Locale)"

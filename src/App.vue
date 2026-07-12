@@ -3,6 +3,7 @@ import NavBar from '@/components/NavBar.vue'
 import AppFooter from '@/components/AppFooter.vue'
 import MemePreview from '@/components/MemePreview.vue'
 import { provideCountries } from '@/composables/useCountries'
+import { provideEntities } from '@/composables/useEntities'
 import { provideLocalization } from '@/composables/useLocalization'
 import { provideMemePreview } from '@/composables/useMemePreview'
 import { provideQuiz } from '@/composables/useQuiz'
@@ -10,6 +11,7 @@ import router from '@/router'
 
 provideLocalization()
 provideCountries()
+provideEntities()
 provideQuiz()
 
 const { previewCountry, closePreview } = provideMemePreview()

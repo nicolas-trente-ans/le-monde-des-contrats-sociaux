@@ -1,0 +1,14 @@
+country_code,entity_id,tier,priority
+US,us.james,1,10
+US,us.usaid,2,10
+US,us.dream_act,2,20
+US,us.hud,2,30
+US,us.snap,2,40
+US,us.social_security,2,50
+US,us.medicare,2,60
+US,us.jose,3,10
+US,us.tysheeqa,3,20
+US,us.phil_deborah,3,30
+US,il,3,40
+US,mx,3,50
+US,us.latin_america,3,60

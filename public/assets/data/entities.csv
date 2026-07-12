@@ -1,0 +1,14 @@
+entity_id,name_key,description_key,image_file,wikipedia_title,grokipedia_url,britannica_url,linked_country_code
+us.james,entity.us.james.name,entity.us.james.description,,,,
+us.usaid,entity.us.usaid.name,entity.us.usaid.description,,United_States_Agency_for_International_Development,https://grokipedia.com/page/United_States_Agency_for_International_Development,https://www.britannica.com/topic/US-Agency-for-International-Development,
+us.dream_act,entity.us.dream_act.name,entity.us.dream_act.description,,DREAM_Act,https://grokipedia.com/page/DREAM_Act,https://www.britannica.com/topic/DREAM-Act,
+us.hud,entity.us.hud.name,entity.us.hud.description,,United_States_Department_of_Housing_and_Urban_Development,https://grokipedia.com/page/United_States_Department_of_Housing_and_Urban_Development,https://www.britannica.com/topic/US-Department-of-Housing-and-Urban-Development,
+us.snap,entity.us.snap.name,entity.us.snap.description,,Supplemental_Nutrition_Assistance_Program,https://grokipedia.com/page/Supplemental_Nutrition_Assistance_Program,https://www.britannica.com/topic/Supplemental-Nutrition-Assistance-Program-US,
+us.social_security,entity.us.social_security.name,entity.us.social_security.description,,Social_Security_(United_States),https://grokipedia.com/page/Social_Security_(United_States),https://www.britannica.com/topic/Social-Security-United-States-social-insurance-system,
+us.medicare,entity.us.medicare.name,entity.us.medicare.description,,Medicare_(United_States),https://grokipedia.com/page/Medicare_(United_States),https://www.britannica.com/topic/Medicare-United-States-health-insurance,
+us.jose,entity.us.jose.name,entity.us.jose.description,,,,
+us.tysheeqa,entity.us.tysheeqa.name,entity.us.tysheeqa.description,,,,
+us.phil_deborah,entity.us.phil_deborah.name,entity.us.phil_deborah.description,,,,
+il,entity.il.name,entity.il.description,,Israel,https://grokipedia.com/page/Israel,https://www.britannica.com/place/Israel,IL
+mx,entity.mx.name,entity.mx.description,,Mexico,https://grokipedia.com/page/Mexico,https://www.britannica.com/place/Mexico,MX
+us.latin_america,entity.us.latin_america.name,entity.us.latin_america.description,,Latin_America,https://grokipedia.com/page/Latin_America,https://www.britannica.com/place/Latin-America,
