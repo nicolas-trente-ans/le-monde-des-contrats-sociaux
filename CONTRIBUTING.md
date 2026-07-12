@@ -113,6 +113,8 @@ Add localized edge labels to [`public/assets/data/Localization.csv`](public/asse
 
 For each entity, add `name` and `description` keys in all four locales (`en`, `fr`, `hu`, `pirate`) before `quiz.title` in `Localization.csv`.
 
+See [`FORMAT.md`](FORMAT.md) for how to write country, entity, and relationship copy (including CSV quoting rules).
+
 UI keys used by the entity explorer: `country.entities.*`, `settings.*`, `reference.*`, `relation.*`.
 
 ### 5. Validate

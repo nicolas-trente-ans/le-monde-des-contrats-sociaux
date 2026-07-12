@@ -6,7 +6,7 @@ How to write copy for `Localization.csv` and related content.
 
 Every user-facing string has four columns: `en`, `fr`, `hu`, `pirate`.
 
-- **en** — default; keep clear and neutral.s
+- **en** — default; keep clear and neutral.
 - **fr** / **hu** — full translations, not glosses.
 - **pirate** — same meaning as English, sacrifice clarity for jokes.
 
