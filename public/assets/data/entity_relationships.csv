@@ -28,3 +28,13 @@ AO,ao.government,ao.kwenda,relation.funds
 AO,ao.kwenda,ao.turma_caop,relation.supports
 AO,ao.government,ao.moxico,relation.flows_to
 AO,ao.jlo,ao.anelka,relation.flows_to
+AR,ar.juan,ar.insaurralde,relation.taxes_fund
+AR,ar.insaurralde,ar.rolex_scandal,relation.flows_to
+AR,ar.juan,ar.bryan,relation.supports
+AR,ar.bryan,ar.roulette,relation.flows_to
+AR,ar.juan,ar.progresar,relation.funds
+AR,ar.progresar,ar.barrio_kids,relation.supports
+AR,ar.barrio_kids,ar.soccer,relation.flows_to
+AR,ar.juan,ar.anses,relation.taxes_fund
+AR,ar.anses,ar.carlos,relation.funds
+AR,ar.carlos,ar.bingo,relation.flows_to

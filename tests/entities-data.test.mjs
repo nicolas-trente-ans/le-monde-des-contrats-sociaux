@@ -22,13 +22,19 @@ function rowsToObjects(rows) {
 
 function loadLocalizationKeys() {
   const rows = parseCsv(fs.readFileSync(path.join(dataDir, 'Localization.csv'), 'utf8'))
-  return new Set(rowsToObjects(rows).map((row) => row.key.trim()).filter(Boolean))
+  return new Set(
+    rowsToObjects(rows)
+      .map((row) => row.key.trim())
+      .filter(Boolean),
+  )
 }
 
 function loadCountryCodes() {
   const rows = parseCsv(fs.readFileSync(path.join(dataDir, 'countries.csv'), 'utf8'))
   return new Set(
-    rowsToObjects(rows).map((row) => row.country_code.trim().toUpperCase()).filter(Boolean),
+    rowsToObjects(rows)
+      .map((row) => row.country_code.trim().toUpperCase())
+      .filter(Boolean),
   )
 }
 
@@ -113,4 +119,23 @@ test('US pilot has tiered entities and relationships', () => {
     if (seeAlso.length >= 3) break
   }
   assert.deepEqual(seeAlso, ['IL', 'MX'])
+})
+
+test('AR pilot has tiered entities and relationships', () => {
+  const countryEntities = rowsToObjects(
+    parseCsv(fs.readFileSync(path.join(dataDir, 'country_entities.csv'), 'utf8')),
+  )
+  const arEntities = countryEntities.filter((row) => row.country_code.trim() === 'AR')
+  const tiers = new Set(arEntities.map((row) => row.tier.trim()))
+
+  assert.ok(arEntities.length >= 10)
+  assert.ok(tiers.has('1'))
+  assert.ok(tiers.has('2'))
+  assert.ok(tiers.has('3'))
+
+  const relationships = rowsToObjects(
+    parseCsv(fs.readFileSync(path.join(dataDir, 'entity_relationships.csv'), 'utf8')),
+  )
+  const arRelationships = relationships.filter((row) => row.country_code.trim() === 'AR')
+  assert.ok(arRelationships.length >= 8)
 })
