@@ -7,11 +7,12 @@ import { countryDescriptionKey, countryLabelKey, useCountries } from '@/composab
 import type { Entity } from '@/composables/useEntities'
 import { useEntities } from '@/composables/useEntities'
 import { useLocalization } from '@/composables/useLocalization'
+import { countryRoutePath } from '@/utils/csv'
 
 const route = useRoute()
 const router = useRouter()
 const { ready, error, getCountry } = useCountries()
-const { ready: entitiesReady, getEntitiesForCountry, getRelationshipsForCountry } = useEntities()
+const { ready: entitiesReady, getEntitiesForCountry, getRelationshipsForCountry, getSeeAlsoCountries } = useEntities()
 const { t } = useLocalization()
 
 const countryCode = computed(() => String(route.params.code ?? '').toUpperCase())
@@ -32,6 +33,11 @@ const relationships = computed(() => {
 })
 
 const hasEntities = computed(() => entityGroups.value.length > 0)
+
+const seeAlsoCountries = computed(() => {
+  if (!entitiesReady.value || !ready.value) return []
+  return getSeeAlsoCountries(countryCode.value).filter((code) => Boolean(getCountry(code)))
+})
 
 function entitiesForTier(tier: number): Entity[] {
   return entityGroups.value.find((group) => group.tier === tier)?.entities ?? []
@@ -59,6 +65,16 @@ watch([ready, country], ([isReady, resolvedCountry]) => {
 
     <article v-else-if="country" class="country__content">
       <h1>{{ t(countryLabelKey(country.countryCode)) }}</h1>
+
+      <nav v-if="seeAlsoCountries.length > 0" class="country__see-also" aria-label="See also">
+        <span class="country__see-also-label">{{ t('country.see_also') }}:</span>
+        <template v-for="(linkedCode, index) in seeAlsoCountries" :key="linkedCode">
+          <span v-if="index > 0" class="country__see-also-sep">,</span>
+          <RouterLink class="country__see-also-link" :to="countryRoutePath(linkedCode)">
+            {{ t(countryLabelKey(linkedCode)) }}
+          </RouterLink>
+        </template>
+      </nav>
 
       <div v-if="hasEntities" class="country__explorer">
         <div class="country__hero">
@@ -122,8 +138,33 @@ watch([ready, country], ([isReady, resolvedCountry]) => {
 }
 
 .country__content h1 {
-  margin: 0 0 1rem;
+  margin: 0 0 0.35rem;
   font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+}
+
+.country__see-also {
+  margin: 0 0 1rem;
+  color: #475467;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.country__see-also-label {
+  margin-right: 0.35rem;
+}
+
+.country__see-also-sep {
+  margin-right: 0.25rem;
+}
+
+.country__see-also-link {
+  color: #175cd3;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.country__see-also-link:hover {
+  text-decoration: underline;
 }
 
 .country__explorer {

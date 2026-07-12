@@ -1,6 +1,7 @@
 country_code,entity_id,tier,priority
 US,us.james,1,10
 US,us.usaid,2,10
+US,us.aipac,2,15
 US,us.dream_act,2,20
 US,us.hud,2,30
 US,us.snap,2,40

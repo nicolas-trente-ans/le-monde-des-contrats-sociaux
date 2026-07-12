@@ -41,6 +41,7 @@ interface EntitiesContext {
   resolveEntity: (entityId: string) => Entity | undefined
   getEntitiesForCountry: (countryCode: string) => CountryEntityGroup[]
   getRelationshipsForCountry: (countryCode: string) => EntityRelationship[]
+  getSeeAlsoCountries: (countryCode: string, limit?: number) => string[]
 }
 
 const entitiesKey: InjectionKey<EntitiesContext> = Symbol('entities')
@@ -177,6 +178,26 @@ export function provideEntities(): EntitiesContext {
     return relationships.value.filter((row) => row.countryCode === code)
   }
 
+  const getSeeAlsoCountries = (countryCode: string, limit = 3): string[] => {
+    const code = countryCode.toUpperCase()
+    const refs = countryEntities.value
+      .filter((ref) => ref.countryCode === code)
+      .sort((a, b) => a.tier - b.tier || a.priority - b.priority)
+
+    const seen = new Set<string>()
+    const results: string[] = []
+
+    for (const ref of refs) {
+      const linked = entities.value.get(ref.entityId)?.linkedCountryCode
+      if (!linked || linked === code || seen.has(linked)) continue
+      seen.add(linked)
+      results.push(linked)
+      if (results.length >= limit) break
+    }
+
+    return results
+  }
+
   const context: EntitiesContext = {
     entities,
     countryEntities,
@@ -186,6 +207,7 @@ export function provideEntities(): EntitiesContext {
     resolveEntity,
     getEntitiesForCountry,
     getRelationshipsForCountry,
+    getSeeAlsoCountries,
   }
 
   provide(entitiesKey, context)

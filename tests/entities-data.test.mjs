@@ -96,4 +96,21 @@ test('US pilot has tiered entities and relationships', () => {
   )
   const usRelationships = relationships.filter((row) => row.country_code.trim() === 'US')
   assert.ok(usRelationships.length >= 5)
+
+  const entities = rowsToObjects(
+    parseCsv(fs.readFileSync(path.join(dataDir, 'entities.csv'), 'utf8')),
+  )
+  const entityById = new Map(entities.map((row) => [row.entity_id.trim(), row]))
+  const seeAlso = []
+  const seen = new Set()
+  for (const row of usEntities.sort(
+    (a, b) => Number(a.tier) - Number(b.tier) || Number(a.priority) - Number(b.priority),
+  )) {
+    const linked = entityById.get(row.entity_id.trim())?.linked_country_code?.trim().toUpperCase()
+    if (!linked || linked === 'US' || seen.has(linked)) continue
+    seen.add(linked)
+    seeAlso.push(linked)
+    if (seeAlso.length >= 3) break
+  }
+  assert.deepEqual(seeAlso, ['IL', 'MX'])
 })

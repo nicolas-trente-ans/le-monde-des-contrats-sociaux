@@ -17,6 +17,7 @@ notfound.back,Back to map,Retour à la carte,Vissza a térképhez,Back ta th' ma
 map.no_meme,No meme available for this country.,Aucun mème disponible pour ce pays.,Ehhez az országhoz nincs elérhető mém.,"No meme available fer this land, matey."
 country.back,Back to map,Retour à la carte,Vissza a térképhez,Back ta th' map
 country.loading,Loading country…,Chargement du pays…,Ország betöltése…,Hoistin' country…
+country.see_also,See also,Voir aussi,Lásd még,See also
 country.FR.label,France,France,Franciaország,France
 country.FR.description,"Nicolas, 30, sits at the center of France's social contract: welfare flows outward to Karim in Africa via Pôle emploi, CAF, RSA, and Western Union, while taxes fund Bernard and Chantal's retirement cruise through URSSAF, Sécurité sociale, and SeLoger.","Nicolas, 30 ans, est au centre du contrat social français : les aides sociales partent vers Karim en Afrique via Pôle emploi, CAF, RSA et Western Union, tandis que les impôts financent la croisière à la retraite de Bernard et Chantal via l'URSSAF, la Sécurité sociale et SeLoger.","Nicolas, 30 éves, a francia társadalmi szerződés közepén ül: a juttatások Karim felé folynak Afrikába a Pôle emploi, CAF, RSA és Western Union útján, miközben az adók Bernard és Chantal nyugdíjas hajóútját finanszírozzák az URSSAF, a Sécurité sociale és a SeLoger révén.","Nicolas, 30, sits at th' heart o' France's social contract: welfare flows outward ta Karim in Africa via Pôle emploi, CAF, RSA, an' Western Union, while taxes fund Bernard an' Chantal's retirement cruise through URSSAF, Sécurité sociale, an' SeLoger, arr!"
 country.CN.label,China,Chine,Kína,China
@@ -149,6 +150,8 @@ entity.us.james.name,"James, 30","James, 30 ans","James, 30","James, 30"
 entity.us.james.description,The stressed taxpayer at the center of America's social contract.,Le contribuable stressé au centre du contrat social américain.,Az amerikai társadalmi szerződés stresszes adófizetője a középpontban.,Th' stressed taxpayer at th' heart o' America's social contract.
 entity.us.usaid.name,USAID,USAID,USAID,USAID
 entity.us.usaid.description,U.S. foreign aid agency whose funds flow abroad from the American people.,Agence d'aide étrangère américaine dont les fonds partent à l'étranger.,"Az amerikai külsegélyügynökség, amelynek pénze külföldre áramlik.",U.S. foreign aid agency whose doubloons flow ta foreign seas.
+entity.us.aipac.name,AIPAC,AIPAC,AIPAC,AIPAC
+entity.us.aipac.description,Pro-Israel lobbying organization advocating U.S. military and economic aid to Israel.,Organisation de lobbying pro-israélienne qui plaide pour l'aide militaire et économique américaine à Israël.,"Izrael-párti lobbiszervezet, amely az amerikai katonai és gazdasági segélyért Izraelnek lobbizik.",Pro-Israel lobbyin' outfit advocatin' U.S. military an' economic aid ta Israel.
 entity.us.dream_act.name,DREAM Act,DREAM Act,DREAM Act,DREAM Act
 entity.us.dream_act.description,Proposed path to legal status for undocumented youth brought to the U.S. as children.,Voie proposée vers un statut légal pour les jeunes sans papiers arrivés enfants aux États-Unis.,Javasolt jogállás az USA-ba gyerekként érkezett fiataloknak.,Proposed path ta legal status fer undocumented youth brought ta th' U.S. as children.
 entity.us.hud.name,HUD,HUD,Lakhatási minisztérium,HUD

@@ -1,6 +1,8 @@
 country_code,from_entity_id,to_entity_id,relationship_key
 US,us.james,us.usaid,relation.funds
 US,us.usaid,il,relation.flows_to
+US,us.james,us.aipac,relation.funds
+US,us.aipac,il,relation.flows_to
 US,us.james,us.dream_act,relation.funds
 US,us.james,us.hud,relation.funds
 US,us.dream_act,us.jose,relation.supports

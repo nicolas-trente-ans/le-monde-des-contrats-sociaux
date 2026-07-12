@@ -58,38 +58,41 @@ watch([() => props.entity.wikipediaTitle, locale], loadPreview)
 
 <template>
   <article class="entity-card" :class="{ 'entity-card--compact': compact }">
-    <div class="entity-card__header">
+    <div class="entity-card__body">
+      <div class="entity-card__content">
+        <div class="entity-card__heading">
+          <h3 class="entity-card__name">{{ t(entity.nameKey) }}</h3>
+          <RouterLink
+            v-if="linkedCountry"
+            class="entity-card__country-link"
+            :to="countryRoutePath(linkedCountry.countryCode)"
+          >
+            {{ t(countryLabelKey(linkedCountry.countryCode)) }}
+          </RouterLink>
+        </div>
+
+        <p class="entity-card__description">{{ t(entity.descriptionKey) }}</p>
+
+        <div v-if="referenceLinks.length > 0" class="entity-card__references">
+          <a
+            v-for="link in referenceLinks"
+            :key="link.source"
+            class="entity-card__reference"
+            :href="link.url"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ t(`reference.${link.source}`) }}
+          </a>
+        </div>
+      </div>
+
       <img
         v-if="entity.imageUrl"
         class="entity-card__image"
         :src="entity.imageUrl"
         :alt="t(entity.nameKey)"
       />
-      <div class="entity-card__heading">
-        <h3 class="entity-card__name">{{ t(entity.nameKey) }}</h3>
-        <RouterLink
-          v-if="linkedCountry"
-          class="entity-card__country-link"
-          :to="countryRoutePath(linkedCountry.countryCode)"
-        >
-          {{ t(countryLabelKey(linkedCountry.countryCode)) }}
-        </RouterLink>
-      </div>
-    </div>
-
-    <p class="entity-card__description">{{ t(entity.descriptionKey) }}</p>
-
-    <div v-if="referenceLinks.length > 0" class="entity-card__references">
-      <a
-        v-for="link in referenceLinks"
-        :key="link.source"
-        class="entity-card__reference"
-        :href="link.url"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {{ t(`reference.${link.source}`) }}
-      </a>
     </div>
 
     <div v-if="showWikipediaPreview && !compact" class="entity-card__preview">
@@ -124,23 +127,36 @@ watch([() => props.entity.wikipediaTitle, locale], loadPreview)
   padding: 0.5rem 0.6rem;
 }
 
-.entity-card__header {
+.entity-card__body {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.6rem;
   align-items: flex-start;
-  margin-bottom: 0.35rem;
 }
 
-.entity-card--compact .entity-card__header {
+.entity-card__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.entity-card__heading {
   margin-bottom: 0.25rem;
 }
 
+.entity-card--compact .entity-card__heading {
+  margin-bottom: 0.2rem;
+}
+
 .entity-card__image {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 4px;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  object-position: top right;
   flex-shrink: 0;
+}
+
+.entity-card--compact .entity-card__image {
+  width: 36px;
+  height: 36px;
 }
 
 .entity-card__name {
