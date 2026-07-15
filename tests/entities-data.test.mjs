@@ -164,3 +164,40 @@ test('AU pilot has tiered entities and relationships', () => {
   assert.ok(entityIds.has('au.centrelink'))
   assert.ok(entityIds.has('au.simon_linda'))
 })
+
+test('AT pilot has tiered entities and relationships', () => {
+  const countryEntities = rowsToObjects(
+    parseCsv(fs.readFileSync(path.join(dataDir, 'country_entities.csv'), 'utf8')),
+  )
+  const atEntities = countryEntities.filter((row) => row.country_code.trim() === 'AT')
+  const tiers = new Set(atEntities.map((row) => row.tier.trim()))
+
+  assert.ok(atEntities.length >= 12)
+  assert.ok(tiers.has('1'))
+  assert.ok(tiers.has('2'))
+  assert.ok(tiers.has('3'))
+
+  const relationships = rowsToObjects(
+    parseCsv(fs.readFileSync(path.join(dataDir, 'entity_relationships.csv'), 'utf8')),
+  )
+  const atRelationships = relationships.filter((row) => row.country_code.trim() === 'AT')
+  assert.ok(atRelationships.length >= 20)
+
+  const entityIds = new Set(atEntities.map((row) => row.entity_id.trim()))
+  assert.ok(entityIds.has('at.franz'))
+  assert.ok(entityIds.has('at.ada'))
+  assert.ok(entityIds.has('at.wiener_wohnen'))
+  assert.ok(entityIds.has('at.josef_marianne'))
+  assert.ok(entityIds.has('at.aid_recipients'))
+  assert.ok(entityIds.has('at.crime'))
+  assert.ok(entityIds.has('at.electricity_prices'))
+
+  const edgeKeys = new Set(
+    atRelationships.map((row) => `${row.from_entity_id.trim()}->${row.to_entity_id.trim()}`),
+  )
+  assert.ok(edgeKeys.has('at.franz->at.abdul'))
+  assert.ok(edgeKeys.has('at.ada->at.aid_recipients'))
+  assert.ok(edgeKeys.has('at.spo->at.wiener_wohnen'))
+  assert.ok(edgeKeys.has('at.abdul->at.crime'))
+  assert.ok(edgeKeys.has('at.reumannplatz->at.child_prostitution'))
+})
