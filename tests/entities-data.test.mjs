@@ -139,3 +139,28 @@ test('AR pilot has tiered entities and relationships', () => {
   const arRelationships = relationships.filter((row) => row.country_code.trim() === 'AR')
   assert.ok(arRelationships.length >= 8)
 })
+
+test('AU pilot has tiered entities and relationships', () => {
+  const countryEntities = rowsToObjects(
+    parseCsv(fs.readFileSync(path.join(dataDir, 'country_entities.csv'), 'utf8')),
+  )
+  const auEntities = countryEntities.filter((row) => row.country_code.trim() === 'AU')
+  const tiers = new Set(auEntities.map((row) => row.tier.trim()))
+
+  assert.ok(auEntities.length >= 12)
+  assert.ok(tiers.has('1'))
+  assert.ok(tiers.has('2'))
+  assert.ok(tiers.has('3'))
+
+  const relationships = rowsToObjects(
+    parseCsv(fs.readFileSync(path.join(dataDir, 'entity_relationships.csv'), 'utf8')),
+  )
+  const auRelationships = relationships.filter((row) => row.country_code.trim() === 'AU')
+  assert.ok(auRelationships.length >= 10)
+
+  const entityIds = new Set(auEntities.map((row) => row.entity_id.trim()))
+  assert.ok(entityIds.has('au.nick'))
+  assert.ok(entityIds.has('au.australian_aid'))
+  assert.ok(entityIds.has('au.centrelink'))
+  assert.ok(entityIds.has('au.simon_linda'))
+})

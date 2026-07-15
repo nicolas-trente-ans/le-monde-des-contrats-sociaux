@@ -84,7 +84,10 @@ watch([ready, country], ([isReady, resolvedCountry]) => {
               :src="country.imageUrl"
               :alt="t(countryLabelKey(country.countryCode))"
             />
-            <p class="country__description">{{ t(countryDescriptionKey(country.countryCode)) }}</p>
+            <p
+              class="country__description"
+              v-html="t(countryDescriptionKey(country.countryCode))"
+            ></p>
           </div>
 
           <aside v-if="tier1Entities.length > 0 || tier2Entities.length > 0" class="country__aside">
@@ -116,7 +119,10 @@ watch([ready, country], ([isReady, resolvedCountry]) => {
           :src="country.imageUrl"
           :alt="t(countryLabelKey(country.countryCode))"
         />
-        <p class="country__description">{{ t(countryDescriptionKey(country.countryCode)) }}</p>
+        <p
+          class="country__description"
+          v-html="t(countryDescriptionKey(country.countryCode))"
+        ></p>
       </template>
     </article>
   </section>
@@ -202,6 +208,16 @@ watch([ready, country], ([isReady, resolvedCountry]) => {
   color: #475467;
   font-size: 0.88rem;
   line-height: 1.5;
+}
+
+.country__description :deep(a) {
+  color: #175cd3;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.country__description :deep(a:hover) {
+  text-decoration: underline;
 }
 
 .country__below {

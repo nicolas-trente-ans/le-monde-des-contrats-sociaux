@@ -16,6 +16,15 @@ Every user-facing string has four columns: `en`, `fr`, `hu`, `pirate`.
 - Escape double quotes inside a field by doubling them: `"the viral ""game"" debate"`
 - One row per key; columns are `key,en,fr,hu,pirate`
 
+## Inline HTML
+
+Country and entity **descriptions** are rendered with HTML enabled (`v-html`). Use this for links and light emphasis only.
+
+- Allowed: `<a href="…" target="_blank" rel="noopener noreferrer">…</a>`, optional `<em>` / `<strong>`
+- Escape attribute quotes by doubling them in CSV: `"… <a href=""https://example.com"">example.com</a> …"`
+- Keep links readable: link the brand/site name, not a wall of URL text
+- Do **not** put HTML in names, UI chrome labels, or quiz answer text (those stay plain text)
+
 ## Country page copy
 
 ### `country.XX.label`

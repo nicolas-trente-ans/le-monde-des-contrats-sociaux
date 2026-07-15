@@ -71,7 +71,7 @@ watch([() => props.entity.wikipediaTitle, locale], loadPreview)
           </RouterLink>
         </div>
 
-        <p class="entity-card__description">{{ t(entity.descriptionKey) }}</p>
+        <p class="entity-card__description" v-html="t(entity.descriptionKey)"></p>
 
         <div v-if="referenceLinks.length > 0" class="entity-card__references">
           <a
@@ -187,6 +187,16 @@ watch([() => props.entity.wikipediaTitle, locale], loadPreview)
   color: #475467;
   font-size: 0.8rem;
   line-height: 1.4;
+}
+
+.entity-card__description :deep(a) {
+  color: #175cd3;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.entity-card__description :deep(a:hover) {
+  text-decoration: underline;
 }
 
 .entity-card--compact .entity-card__description {
