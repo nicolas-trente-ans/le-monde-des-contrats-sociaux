@@ -146,6 +146,7 @@ relation.taxes_fund,taxes fund,impôts financent,adók finanszíroznak,taxes fun
 relation.supports,supports,soutient,támogat,supports
 relation.remits_to,remits to,envoie vers,utal,remits ta
 relation.retires_to,retires to,part en retraite vers,nyugdíjba megy,retires ta
+relation.threatens,threatens,menace,fenyeget,threatens
 entity.us.james.name,"James, 30","James, 30 ans","James, 30","James, 30"
 entity.us.james.description,The stressed taxpayer at the center of America's social contract.,Le contribuable stressé au centre du contrat social américain.,Az amerikai társadalmi szerződés stresszes adófizetője a középpontban.,Th' stressed taxpayer at th' heart o' America's social contract.
 entity.us.usaid.name,USAID,USAID,USAID,USAID
@@ -288,6 +289,52 @@ entity.at.electricity_prices.name,Electricity prices,Prix de l'électricité,Ár
 entity.at.electricity_prices.description,Sharply rising consumer electricity prices facing Austrian households.,Hausse nette des prix de l'électricité pour les ménages autrichiens.,Élesen emelkedő lakossági áramárak az osztrák háztartásokban.,Sharply risin' consumer electricity prices facin' Austrian households.
 entity.at.child_prostitution.name,Child prostitution,Prostitution des mineurs,Gyermekprostitúció,Child prostitution
 entity.at.child_prostitution.description,Sexual exploitation of minors — a trafficking and urban crime issue tied to street environments.,Exploitation sexuelle de mineurs — enjeu de traite et de criminalité urbaine.,Kiskorúak szexuális kizsákmányolása — emberkereskedelem és városi bűnözés.,Sexual exploitation o' minors — traffickin' an' urban crime tied ta street environments.
+entity.br.pedro.name,"Pedro, 30","Pedro, 30 ans","Pedro, 30","Pedro, 30"
+entity.br.pedro.description,The stressed taxpayer at the center of Brazil's O Contrato Social.,Le contribuable stressé au centre de l'O Contrato Social brésilien.,Brazília O Contrato Social stresszes adófizetője a középpontban.,Th' stressed taxpayer at th' heart o' Brazil's O Contrato Social.
+entity.br.federal_government.name,Governo Federal,Gouvernement fédéral,Szövetségi kormány,Governo Federal
+entity.br.federal_government.description,Brazil's federal executive state branded União e Reconstrução.,Exécutif fédéral brésilien présenté sous l'étiquette União e Reconstrução.,Brazília szövetségi végrehajtó hatalma — União e Reconstrução.,Brazil's federal executive state branded União e Reconstrução.
+entity.br.receita_federal.name,Receita Federal,Receita Federal,Receita Federal,Receita Federal
+entity.br.receita_federal.description,Brazil's federal tax authority collecting income and consumption taxes.,Administration fiscale fédérale brésilienne collectant impôts sur le revenu et la consommation.,Brazília szövetségi adóhatósága — jövedelmi és fogyasztási adók.,Brazil's federal tax authority collectin' income an' consumption taxes.
+entity.br.mdhc.name,Ministério dos Direitos Humanos,Ministère des Droits humains,Emberi Jogi Minisztérium,Ministério dos Direitos Humanos
+entity.br.mdhc.description,Ministry of Human Rights and Citizenship overseeing rights and citizenship policy.,Ministère des Droits humains et de la Citoyenneté pilotant les politiques de droits.,Emberi jogi és állampolgársági minisztérium.,Ministry o' Human Rights an' Citizenship overseeing rights policy.
+entity.br.previdencia.name,Previdência Social,Previdência Social,Previdência Social,Previdência Social
+entity.br.previdencia.description,Brazil's public social security system paying retirement and related benefits.,Système public de sécurité sociale brésilien versant retraites et prestations.,Brazília állami társadalombiztosítási rendszere — nyugdíjak és ellátások.,Brazil's public social security system payin' retirement an' related benefits.
+entity.br.funai.name,FUNAI,FUNAI,FUNAI,FUNAI
+entity.br.funai.description,National Foundation of Indigenous Peoples protecting indigenous lands and rights.,Fondation nationale des peuples autochtones protégeant terres et droits indigènes.,Nemzeti Őslakos Népek Alapítványa — őslakos földek és jogok.,National Foundation o' Indigenous Peoples protectin' indigenous lands an' rights.
+entity.br.bolsa_familia.name,Bolsa Família,Bolsa Família,Bolsa Família,Bolsa Família
+entity.br.bolsa_familia.description,Federal cash-transfer program supporting low-income families across Brazil.,Programme fédéral de transferts monétaires pour les familles à faibles revenus.,Szövetségi pénzbeli támogatás alacsony jövedelmű családoknak.,Federal cash-transfer program supportin' low-income families across Brazil.
+entity.br.pe_de_meia.name,Pé-de-Meia,Pé-de-Meia,Pé-de-Meia,Pé-de-Meia
+entity.br.pe_de_meia.description,Federal student savings incentive paying youth who stay enrolled in school.,Incentive fédéral d'épargne scolaire pour les jeunes qui restent scolarisés.,Szövetségi diákmegtakarítási ösztönző a iskolába járó fiataloknak.,Federal student savings incentive payin' youth who stay enrolled in school.
+entity.br.armando.name,"Dr. Armando, 67","Dr Armando, 67 ans","Dr. Armando, 67","Dr. Armando, 67"
+entity.br.armando.description,Public servant drawing federal payroll toward luxury goods vice and recreational drugs.,Fonctionnaire public orientant la masse salariale fédérale vers luxe vice et drogues.,Közszolga — szövetségi bér a luxus vicerány és drogok felé.,Public servant drawin' federal payroll toward luxury goods vice an' recreational drugs.
+entity.br.latrocinio.name,"MC Latrocínio, 31","MC Latrocínio, 31 ans","MC Latrocínio, 31","MC Latrocínio, 31"
+entity.br.latrocinio.description,"Favela-linked figure associated with armed robbery culture, gambling, and street violence.","Figure liée à la favela associée au vol à main armée, aux jeux et à la violence de rue.","Favelához kötött figura — fegyveres rablás, szerencsejáték és utcai erőszak.","Favela-linked figure tied ta armed robbery culture, gamblin', an' street violence."
+entity.br.iniguasu.name,"Inĩguasu, 32","Inĩguasu, 32 ans","Inĩguasu, 32","Inĩguasu, 32"
+entity.br.iniguasu.description,Indigenous Brazilian supported through FUNAI policies and land-rights frameworks.,Autochtone brésilien soutenu par les politiques FUNAI et le cadre des droits territoriaux.,Brazíliai őslakos — FUNAI-politika és földjogi keretek.,Indigenous Brazilian supported through FUNAI policies an' land-rights frameworks.
+entity.br.neide_deividsson.name,"Neide, 36 & Deividsson, 9","Neide, 36 ans, et Deividsson, 9","Neide, 36 és Deividsson, 9","Neide, 36 an' Deividsson, 9"
+entity.br.neide_deividsson.description,Low-income mother and son receiving Bolsa Família and Pé-de-Meia support.,Mère et fils à faibles revenus bénéficiant du Bolsa Família et du Pé-de-Meia.,Alacsony jövedelmű anya és fia — Bolsa Família és Pé-de-Meia támogatás.,Low-income mother an' son receivin' Bolsa Família an' Pé-de-Meia support.
+entity.br.nestor.name,"Nestor, 73","Nestor, 73 ans","Nestor, 73","Nestor, 73"
+entity.br.nestor.description,Rural retiree collecting Previdência Social benefits amid gambling and liquor spending.,Retraité rural touchant la Previdência Social entre jeux et alcool.,"Vidéki nyugdíjas — Previdência Social, szerencsejáték és ital.",Rural retiree collectin' Previdência Social amid gamblin' an' liquor spendin'.
+entity.br.favela.name,Favela,Favela,Favela,Favela
+entity.br.favela.description,"Informal urban settlements shaped by poverty, social programs, and parallel economies.","Bidonvilles urbains marqués par la pauvreté, les aides sociales et les économies parallèles.","Informális városi telepek — szegénység, szociális programok és párhuzamos gazdaság.",Informal urban settlements shaped by poverty social programs an' parallel economies.
+entity.br.rolex.name,Rolex,Rolex,Rolex,Rolex
+entity.br.rolex.description,Luxury watch brand signaling conspicuous consumption from public-sector income.,Marque de montres de luxe symbole de consommation ostentatoire sur revenus publics.,Luxusóra-márka — látható fogyasztás közszolgálati jövedelemből.,Luxury watch brand signalin' conspicuous consumption from public-sector income.
+entity.br.sex_work.name,Sex work,Travail du sexe,Szexmunka,Sex work
+entity.br.sex_work.description,Commercial sexual services purchased as a private vice endpoint of discretionary spending.,Services sexuels commerciaux achetés comme vice privé des dépenses discrétionnaires.,Kereskedelmi szexuális szolgáltatások — diszkrecionális költés végpontja.,Commercial sexual services bought as a private vice endpoint o' discretionary spendin'.
+entity.br.drugs.name,Street drugs,Drogues de rue,Utcai drogok,Street drugs
+entity.br.drugs.description,Illicit narcotics and crack cocaine circulating in informal urban economies.,Stupéfiants illicites et crack circulant dans les économies urbaines informelles.,Illegális kábítószerek és crack — informális városi gazdaság.,Illicit narcotics an' crack cocaine circulatin' in informal urban economies.
+entity.br.toyota.name,Toyota,Toyota,Toyota,Toyota
+entity.br.toyota.description,Japanese automaker whose vehicles are a durable consumer prize in rural and indigenous trade.,Constructeur automobile japonais dont les véhicules sont un butin durable du commerce rural.,Japán autógyártó — tartós fogyasztói státusz szimbólum.,Japanese automaker whose vehicles are a durable consumer prize in rural trade.
+entity.br.jbl.name,JBL,JBL,JBL,JBL
+entity.br.jbl.description,Portable consumer audio brand popular as a status purchase in street and favela culture.,Marque d'audio portable symbole d'achat ostentatoire dans la culture de rue et des favelas.,Hordozható hangmárka — státuszvásárlás utcai és favela kultúrában.,Portable consumer audio brand popular as a status purchase in street an' favela culture.
+entity.br.fortune_tiger.name,Fortune Tiger,Fortune Tiger,Fortune Tiger,Fortune Tiger
+entity.br.fortune_tiger.description,Viral online casino game widely played as informal digital gambling in Brazil.,Jeu de casino en ligne viral largement pratiqué comme paris numériques informels au Brésil.,Viral online kaszinójáték — informális digitális szerencsejáték Brazíliában.,Viral online casino game widely played as informal digital gamblin' in Brazil.
+entity.br.jogo_do_bicho.name,Jogo do Bicho,Jogo do Bicho,Jogo do Bicho,Jogo do Bicho
+entity.br.jogo_do_bicho.description,Illegal animal-lottery gambling deeply rooted in Brazilian popular culture.,Loterie animale illégale profondément ancrée dans la culture populaire brésilienne.,Illegális állatos lottó — mélyen a brazil népi kultúrában.,Illegal animal-lottery gamblin' deeply rooted in Brazilian popular culture.
+entity.br.pitu.name,Pitú,Pitú,Pitú,Pitú
+entity.br.pitu.description,Popular Brazilian cachaça brand associated with cheap distilled sugarcane spirits.,Marque populaire de cachaça associée aux alcools de canne bon marché.,Népszerű brazil cachaça márka — olcsó cukornád párlat.,Popular Brazilian cachaça brand associated with cheap sugarcane spirits.
+entity.br.soccer.name,Soccer ball,Ballon de foot,Focilabda,Soccer ball
+entity.br.soccer.description,Brazil's national football passion as everyday leisure in low-income neighborhoods.,Passion nationale brésilienne pour le football loisirs des quartiers populaires.,Brazília nemzeti futball szenvedélye — mindennapi szabadidő a szegénynegyedekben.,Brazil's national football passion as everyday leisure in low-income neighborhoods.
 quiz.title,Which Nicolas are you?,Quel Nicolas êtes-vous ?,Melyik Nicolas vagy?,Which Nicolas be ye?
 quiz.subtitle,Answer 15 questions to find your Nicolas.,Répondez à 15 questions pour trouver votre Nicolas.,Válaszoljon 15 kérdésre,"Answer 15 questions ta find yer Nicolas, ye scurvy dog."
 quiz.progress,Question {current} of {total},Question {current} sur {total},{current}. kérdés / {total},Question {current} o' {total}

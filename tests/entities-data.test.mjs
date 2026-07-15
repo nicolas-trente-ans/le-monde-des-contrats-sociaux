@@ -201,3 +201,38 @@ test('AT pilot has tiered entities and relationships', () => {
   assert.ok(edgeKeys.has('at.abdul->at.crime'))
   assert.ok(edgeKeys.has('at.reumannplatz->at.child_prostitution'))
 })
+
+test('BR pilot has tiered entities and relationships', () => {
+  const countryEntities = rowsToObjects(
+    parseCsv(fs.readFileSync(path.join(dataDir, 'country_entities.csv'), 'utf8')),
+  )
+  const brEntities = countryEntities.filter((row) => row.country_code.trim() === 'BR')
+  const tiers = new Set(brEntities.map((row) => row.tier.trim()))
+
+  assert.ok(brEntities.length >= 18)
+  assert.ok(tiers.has('1'))
+  assert.ok(tiers.has('2'))
+  assert.ok(tiers.has('3'))
+
+  const relationships = rowsToObjects(
+    parseCsv(fs.readFileSync(path.join(dataDir, 'entity_relationships.csv'), 'utf8')),
+  )
+  const brRelationships = relationships.filter((row) => row.country_code.trim() === 'BR')
+  assert.ok(brRelationships.length >= 20)
+
+  const entityIds = new Set(brEntities.map((row) => row.entity_id.trim()))
+  assert.ok(entityIds.has('br.pedro'))
+  assert.ok(entityIds.has('br.bolsa_familia'))
+  assert.ok(entityIds.has('br.latrocinio'))
+  assert.ok(entityIds.has('br.nestor'))
+  assert.ok(entityIds.has('br.funai'))
+
+  const edgeKeys = new Set(
+    brRelationships.map((row) => `${row.from_entity_id.trim()}->${row.to_entity_id.trim()}`),
+  )
+  assert.ok(edgeKeys.has('br.pedro->br.receita_federal'))
+  assert.ok(edgeKeys.has('br.latrocinio->br.pedro'))
+  assert.ok(edgeKeys.has('br.bolsa_familia->br.neide_deividsson'))
+  assert.ok(edgeKeys.has('br.funai->br.iniguasu'))
+  assert.ok(edgeKeys.has('br.armando->br.rolex'))
+})
