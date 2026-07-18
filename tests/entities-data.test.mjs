@@ -236,3 +236,38 @@ test('BR pilot has tiered entities and relationships', () => {
   assert.ok(edgeKeys.has('br.funai->br.iniguasu'))
   assert.ok(edgeKeys.has('br.armando->br.rolex'))
 })
+
+test('BG pilot has tiered entities and relationships', () => {
+  const countryEntities = rowsToObjects(
+    parseCsv(fs.readFileSync(path.join(dataDir, 'country_entities.csv'), 'utf8')),
+  )
+  const bgEntities = countryEntities.filter((row) => row.country_code.trim() === 'BG')
+  const tiers = new Set(bgEntities.map((row) => row.tier.trim()))
+
+  assert.ok(bgEntities.length >= 14)
+  assert.ok(tiers.has('1'))
+  assert.ok(tiers.has('2'))
+  assert.ok(tiers.has('3'))
+
+  const relationships = rowsToObjects(
+    parseCsv(fs.readFileSync(path.join(dataDir, 'entity_relationships.csv'), 'utf8')),
+  )
+  const bgRelationships = relationships.filter((row) => row.country_code.trim() === 'BG')
+  assert.ok(bgRelationships.length >= 16)
+
+  const entityIds = new Set(bgEntities.map((row) => row.entity_id.trim()))
+  assert.ok(entityIds.has('bg.georgi'))
+  assert.ok(entityIds.has('bg.nssi'))
+  assert.ok(entityIds.has('bg.radka'))
+  assert.ok(entityIds.has('bg.unknown'))
+  assert.ok(entityIds.has('bg.excess'))
+
+  const edgeKeys = new Set(
+    bgRelationships.map((row) => `${row.from_entity_id.trim()}->${row.to_entity_id.trim()}`),
+  )
+  assert.ok(edgeKeys.has('bg.georgi->bg.nssi'))
+  assert.ok(edgeKeys.has('bg.nssi->bg.ginka'))
+  assert.ok(edgeKeys.has('bg.ginka->bg.phone_scams'))
+  assert.ok(edgeKeys.has('bg.labour->bg.radka'))
+  assert.ok(edgeKeys.has('bg.doctor->bg.excess'))
+})
