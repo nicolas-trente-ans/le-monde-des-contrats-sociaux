@@ -189,3 +189,11 @@ CL,cl.byron_jennifer,cl.tusi,relation.flows_to
 CL,cl.francisco_anita,cl.latam,relation.flows_to
 CL,cl.latam,cl.miami,relation.flows_to
 CL,cl.francisco_anita,cl.miami,relation.retires_to
+CN,cn.zhang_weiyi,cn.ministry_finance,relation.taxes_fund
+CN,cn.zhang_weiyi,cn.china_aid,relation.funds
+CN,cn.zhang_weiyi,cn.ssf,relation.taxes_fund
+CN,cn.china_aid,cn.eddy,relation.flows_to
+CN,cn.ministry_finance,cn.ababekri,relation.funds
+CN,cn.ministry_finance,cn.gyaltsen,relation.funds
+CN,cn.ssf,cn.su_gu,relation.funds
+CN,cn.su_gu,cn.mahjong,relation.flows_to

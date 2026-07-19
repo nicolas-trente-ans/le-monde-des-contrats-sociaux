@@ -162,3 +162,12 @@ cl.teletrak,entity.cl.teletrak.name,entity.cl.teletrak.description,,Horse_racing
 cl.tusi,entity.cl.tusi.name,entity.cl.tusi.description,,Tusi_(drug),,,
 cl.latam,entity.cl.latam.name,entity.cl.latam.description,,LATAM_Airlines_Group,,,
 cl.miami,entity.cl.miami.name,entity.cl.miami.description,,Miami,,,US
+cn.zhang_weiyi,entity.cn.zhang_weiyi.name,entity.cn.zhang_weiyi.description,,,,
+cn.ministry_finance,entity.cn.ministry_finance.name,entity.cn.ministry_finance.description,,Ministry_of_Finance_of_the_People's_Republic_of_China,,,
+cn.china_aid,entity.cn.china_aid.name,entity.cn.china_aid.description,,China_International_Development_Cooperation_Agency,,,
+cn.ssf,entity.cn.ssf.name,entity.cn.ssf.description,,National_Council_for_Social_Security_Fund,,,
+cn.eddy,entity.cn.eddy.name,entity.cn.eddy.description,,Africa-China_relations,,,
+cn.ababekri,entity.cn.ababekri.name,entity.cn.ababekri.description,,Uyghurs,,,
+cn.gyaltsen,entity.cn.gyaltsen.name,entity.cn.gyaltsen.description,,Tibetan_people,,,
+cn.su_gu,entity.cn.su_gu.name,entity.cn.su_gu.description,,,,
+cn.mahjong,entity.cn.mahjong.name,entity.cn.mahjong.description,,Mahjong,,,

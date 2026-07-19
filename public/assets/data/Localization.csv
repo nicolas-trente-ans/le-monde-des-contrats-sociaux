@@ -473,6 +473,24 @@ entity.cl.latam.name,LATAM,LATAM,LATAM,LATAM
 entity.cl.latam.description,Major Latin American airline group flying Chile–U.S. routes including Miami.,Grand groupe aérien latino-américain desservant les liaisons Chili–États-Unis dont Miami.,Nagy latin-amerikai légitársaság — Chile–USA járatok Miamiba is.,Major Latin American airline group flyin' Chile–U.S. routes includin' Miami.
 entity.cl.miami.name,Miami,Miami,Miami,Miami
 entity.cl.miami.description,Florida destination for Chilean retirees on LATAM snowbird and leisure trips.,Destination en Floride pour retraités chiliens en voyages snowbird et loisirs LATAM.,Floridai célpont chilei nyugdíjasoknak LATAM snowbird és szabadidős utakon.,Florida destination fer Chilean retirees on LATAM snowbird an' leisure trips.
+entity.cn.zhang_weiyi.name,"Zhang Weiyi, 30","Zhang Weiyi, 30 ans","Zhang Weiyi, 30","Zhang Weiyi, 30"
+entity.cn.zhang_weiyi.description,The stressed taxpayer at the center of China's 社会契约.,Le contribuable stressé au centre du 社会契约 chinois.,Kína 社会契约 stresszes adófizetője a középpontban.,Th' stressed taxpayer at th' heart o' China's 社会契约.
+entity.cn.ministry_finance.name,Ministry of Finance,Ministère des Finances,Pénzügyminisztérium,Ministry o' Finance
+entity.cn.ministry_finance.description,Ministry of Finance of the PRC allocating central budget spending.,Ministère des Finances de la RPC allouant les dépenses du budget central.,A KNK Pénzügyminisztériuma — központi költségvetési kiadások.,Ministry o' Finance o' th' PRC allocatin' central budget spendin'.
+entity.cn.china_aid.name,China Aid,China Aid,China Aid,China Aid
+entity.cn.china_aid.description,China's foreign-aid brand channeling development cooperation abroad.,Marque d'aide étrangère chinoise canalisant la coopération au développement à l'étranger.,Kína külsegély-márkája — fejlesztési együttműködés külföldre.,China's foreign-aid brand channelin' development cooperation abroad.
+entity.cn.ssf.name,SSF,SSF,SSF,SSF
+entity.cn.ssf.description,National Council for Social Security Fund managing China's social-security reserves.,Conseil national du fonds de sécurité sociale gérant les réserves chinoises.,Nemzeti Társadalombiztosítási Alap Tanácsa — kínai társadalombiztosítási tartalékok.,National Council for Social Security Fund managin' China's social-security reserves.
+entity.cn.eddy.name,Eddy,Eddy,Eddy,Eddy
+entity.cn.eddy.description,Overseas aid recipient linked to China Aid development spending in Africa.,Bénéficiaire d'aide à l'étranger lié aux dépenses China Aid en Afrique.,Külföldi segélykedvezményezett — China Aid fejlesztési kiadások Afrikában.,Overseas aid recipient linked ta China Aid development spendin' in Africa.
+entity.cn.ababekri.name,"Ababəkri, 50","Ababəkri, 50 ans","Ababəkri, 50","Ababəkri, 50"
+entity.cn.ababekri.description,Uyghur man associated with East Turkestan identity and state budget oversight.,Ouïghour associé à l'identité du Turkestan oriental et au budget d'État.,Ujgur férfi — Kelet-Turkesztán identitás és állami költségvetési felügyelet.,Uyghur man tied ta East Turkestan identity an' state budget oversight.
+entity.cn.gyaltsen.name,"Gyaltsen, 25","Gyaltsen, 25 ans","Gyaltsen, 25","Gyaltsen, 25"
+entity.cn.gyaltsen.description,Young Tibetan associated with Tibetan identity and central fiscal transfers.,Jeune Tibétain associé à l'identité tibétaine et aux transferts fiscaux centraux.,Fiatal tibeti — tibeti identitás és központi költségvetési transzferek.,Young Tibetan tied ta Tibetan identity an' central fiscal transfers.
+entity.cn.su_gu.name,"Su Yunting & Gu Jingmin, 70","Su Yunting et Gu Jingmin, 70 ans","Su Yunting és Gu Jingmin, 70","Su Yunting an' Gu Jingmin, 70"
+entity.cn.su_gu.description,Elderly couple collecting SSF social-security support toward leisure spending.,Couple âgé touchant le soutien SSF de sécurité sociale pour des dépenses de loisirs.,Idős házaspár — SSF társadalombiztosítási támogatás a szabadidő felé.,Elderly couple collectin' SSF social-security support toward leisure spendin'.
+entity.cn.mahjong.name,Mahjong,Mahjong,Mahjong,Mahjong
+entity.cn.mahjong.description,Traditional tile game as everyday leisure for Chinese retirees.,Jeu de tuiles traditionnel loisir quotidien des retraités chinois.,Hagyományos kőjáték — kínai nyugdíjasok mindennapi szabadideje.,Traditional tile game as everyday leisure fer Chinese retirees.
 quiz.title,Which Nicolas are you?,Quel Nicolas êtes-vous ?,Melyik Nicolas vagy?,Which Nicolas be ye?
 quiz.subtitle,Answer 15 questions to find your Nicolas.,Répondez à 15 questions pour trouver votre Nicolas.,Válaszoljon 15 kérdésre,"Answer 15 questions ta find yer Nicolas, ye scurvy dog."
 quiz.progress,Question {current} of {total},Question {current} sur {total},{current}. kérdés / {total},Question {current} o' {total}
