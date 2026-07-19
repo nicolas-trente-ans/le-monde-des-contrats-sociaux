@@ -341,3 +341,38 @@ test('CA pilot has tiered entities and relationships', () => {
   assert.ok(edgeKeys.has('ca.ircc->ca.workers'))
   assert.ok(edgeKeys.has('ca.wise->in'))
 })
+
+test('CL pilot has tiered entities and relationships', () => {
+  const countryEntities = rowsToObjects(
+    parseCsv(fs.readFileSync(path.join(dataDir, 'country_entities.csv'), 'utf8')),
+  )
+  const clEntities = countryEntities.filter((row) => row.country_code.trim() === 'CL')
+  const tiers = new Set(clEntities.map((row) => row.tier.trim()))
+
+  assert.ok(clEntities.length >= 14)
+  assert.ok(tiers.has('1'))
+  assert.ok(tiers.has('2'))
+  assert.ok(tiers.has('3'))
+
+  const relationships = rowsToObjects(
+    parseCsv(fs.readFileSync(path.join(dataDir, 'entity_relationships.csv'), 'utf8')),
+  )
+  const clRelationships = relationships.filter((row) => row.country_code.trim() === 'CL')
+  assert.ok(clRelationships.length >= 16)
+
+  const entityIds = new Set(clEntities.map((row) => row.entity_id.trim()))
+  assert.ok(entityIds.has('cl.seba'))
+  assert.ok(entityIds.has('cl.fonasa'))
+  assert.ok(entityIds.has('cl.afp'))
+  assert.ok(entityIds.has('cl.easter_island'))
+  assert.ok(entityIds.has('cl.miami'))
+
+  const edgeKeys = new Set(
+    clRelationships.map((row) => `${row.from_entity_id.trim()}->${row.to_entity_id.trim()}`),
+  )
+  assert.ok(edgeKeys.has('cl.seba->cl.migraciones'))
+  assert.ok(edgeKeys.has('cl.migraciones->cl.dieudonne_yonaiker'))
+  assert.ok(edgeKeys.has('cl.fonasa->cl.easter_island'))
+  assert.ok(edgeKeys.has('cl.byron_jennifer->cl.tusi'))
+  assert.ok(edgeKeys.has('cl.francisco_anita->cl.miami'))
+})
